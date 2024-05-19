@@ -1,12 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\project ASP.NET\\GymMe\\backend\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HomePage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\HomePage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HomePage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\HomePage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-19T17:52:22.503Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

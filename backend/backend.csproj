@@ -43,7 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -72,6 +80,16 @@
       <DependentUpon>GymMeSQLDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="GymMeWebService.asmx" />
+    <Content Include="Model\GymMeDatabaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GymMeDatabaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\GymMeDatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>GymMeDatabaseModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -79,9 +97,49 @@
       <DependentUpon>GymMeWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Model\GymMeDatabaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymMeDatabaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GymMeDatabaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GymMeDatabaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MsCart.cs">
+      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MsSupplement.cs">
+      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MsSupplementType.cs">
+      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MsUser.cs">
+      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransactionDetail.cs">
+      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransactionHeader.cs">
+      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="Model\GymMeDatabaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GymMeDatabaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\GymMeDatabaseModel.edmx.diagram">
+      <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -93,9 +151,11 @@
   <ItemGroup>
     <Folder Include="Factory\" />
     <Folder Include="Handler\" />
-    <Folder Include="Model\" />
     <Folder Include="Module\" />
     <Folder Include="Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

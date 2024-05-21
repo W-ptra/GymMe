@@ -40,7 +40,7 @@ namespace frontend.Controller
             DateTime userDOB = DateTime.Parse(DOB);
 
             service.registerNewUser(username, email, password, userDOB, gender, "Customer");
-
+            
             return "register sucessfully";
         }
     }

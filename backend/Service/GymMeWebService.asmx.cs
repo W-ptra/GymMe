@@ -1,4 +1,6 @@
 ﻿using backend.Handler;
+using backend.Model;
+using backend.Module;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +35,21 @@ namespace backend
         [WebMethod]
         public String login(String username,String password)
         {
-            return UserHandler.login(username,password);
+            String result = UserHandler.login(username, password);
+            return json<String>.encode(result);
+        }
+
+        [WebMethod]
+        public String getUser(String username)
+        {
+            MsUser user = UserHandler.getUser(username);
+            return json<MsUser>.encode(user);
+        }
+
+        [WebMethod]
+        public String getSupplementList()
+        {
+            return json<List<MsSupplement>>.encode(SupplementHandler.getSupplement());
         }
     }
 }

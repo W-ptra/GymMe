@@ -35,6 +35,10 @@ namespace frontend.GymMeService {
         
         private System.Threading.SendOrPostCallback loginOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getSupplementListOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -81,6 +85,12 @@ namespace frontend.GymMeService {
         
         /// <remarks/>
         public event loginCompletedEventHandler loginCompleted;
+        
+        /// <remarks/>
+        public event getUserCompletedEventHandler getUserCompleted;
+        
+        /// <remarks/>
+        public event getSupplementListCompletedEventHandler getSupplementListCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -179,6 +189,62 @@ namespace frontend.GymMeService {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string getUser(string username) {
+            object[] results = this.Invoke("getUser", new object[] {
+                        username});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getUserAsync(string username) {
+            this.getUserAsync(username, null);
+        }
+        
+        /// <remarks/>
+        public void getUserAsync(string username, object userState) {
+            if ((this.getUserOperationCompleted == null)) {
+                this.getUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetUserOperationCompleted);
+            }
+            this.InvokeAsync("getUser", new object[] {
+                        username}, this.getUserOperationCompleted, userState);
+        }
+        
+        private void OngetUserOperationCompleted(object arg) {
+            if ((this.getUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getUserCompleted(this, new getUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getSupplementList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string getSupplementList() {
+            object[] results = this.Invoke("getSupplementList", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getSupplementListAsync() {
+            this.getSupplementListAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getSupplementListAsync(object userState) {
+            if ((this.getSupplementListOperationCompleted == null)) {
+                this.getSupplementListOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetSupplementListOperationCompleted);
+            }
+            this.InvokeAsync("getSupplementList", new object[0], this.getSupplementListOperationCompleted, userState);
+        }
+        
+        private void OngetSupplementListOperationCompleted(object arg) {
+            if ((this.getSupplementListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getSupplementListCompleted(this, new getSupplementListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -240,6 +306,58 @@ namespace frontend.GymMeService {
         private object[] results;
         
         internal loginCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void getUserCompletedEventHandler(object sender, getUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void getSupplementListCompletedEventHandler(object sender, getSupplementListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getSupplementListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getSupplementListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

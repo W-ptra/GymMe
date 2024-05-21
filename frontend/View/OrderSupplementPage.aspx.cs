@@ -1,4 +1,6 @@
-﻿using System;
+﻿using backend.Module;
+using frontend.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,31 +13,50 @@ namespace frontend.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Role"] == null)
+            if (!IsPostBack)
             {
-                Response.Redirect("~/View/LoginPage.aspx");
+                HttpCookie roleCookie = Request.Cookies["Role"];
+                if (roleCookie != null)
+                {
+                    Session["Role"] = roleCookie.Value;
+                }
+
+                if(Session["Role"] == null)
+                {
+                    Response.Redirect("~/View/LoginPage.aspx");
+                }
+
+                if (Session["Role"].ToString() == "Admin")
+                {
+                    Response.Redirect("~/View/LoginPage.aspx");
+                }
             }
+
+            GymMeService.GymMeWebService service = new GymMeService.GymMeWebService();
+            List<MsSupplement> supplementList = json<List<MsSupplement>>.decode(service.getSupplementList());
+            GV.DataSource = supplementList;
+            GV.DataBind();
         }
 
         protected void btn_order_supplement_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/View/OrderSupplementPage");
+            Response.Redirect("~/View/OrderSupplementPage.aspx");
         }
 
         protected void btn_history_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/View/HistoryPage");
+            Response.Redirect("~/View/HistoryPage.aspx");
         }
 
         protected void btn_profile_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/View/ProfilePage");
+            Response.Redirect("~/View/ProfilePage.aspx");
         }
 
         protected void btn_logout_Click(object sender, EventArgs e)
         {
             Session.Clear();
-            Response.Redirect("~/View/LoginPage");
+            Response.Redirect("~/View/LoginPage.aspx");
         }
     }
 }

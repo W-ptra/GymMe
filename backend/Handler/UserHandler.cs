@@ -32,6 +32,11 @@ namespace backend.Handler
             return currentUser.UserRole;
         }
 
+        public static MsUser getUser(String username)
+        {
+            return UserRepository.getMsUser(username);
+        }
+
         public static void update(String username, String email, DateTime DOB, String gender, String role)
         {
             UserRepository.updateMsUser(username, email, DOB, gender, role);

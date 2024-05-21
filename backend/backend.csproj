@@ -97,7 +97,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Handler\SupplementHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
+    <Compile Include="Repository\SupplementRepository.cs" />
     <Compile Include="Service\GymMeWebService.asmx.cs">
       <DependentUpon>GymMeWebService.asmx</DependentUpon>
       <SubType>Component</SubType>

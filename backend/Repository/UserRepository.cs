@@ -47,5 +47,6 @@ namespace backend.Repository
             currentUser.Password = newPassword;
             db.SaveChanges();
         }
+
     }
 }

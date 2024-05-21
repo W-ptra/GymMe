@@ -1,4 +1,5 @@
-﻿using System;
+﻿using backend.Module;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,7 +21,7 @@ namespace frontend.Controller
             }
 
             GymMeService.GymMeWebService service = new GymMeService.GymMeWebService();
-            String loginResult = service.login(username, password);
+            String loginResult = json<String>.decode(service.login(username, password));
             if (loginResult == "login sucessfull")
             {
                 return "login sucessfully";

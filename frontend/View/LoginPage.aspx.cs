@@ -26,20 +26,45 @@ namespace frontend.View
 
             String isSucessful = LoginController.login(username, password);
 
-            if (isSucessful == "register sucessfully")
+            if (isSucessful == "Customer" || isSucessful == "Admin")
             {
                 if (isRememberMe)
                 {
-                    // cookies yummy
+                    HttpCookie newCookie = new HttpCookie("Role");
+                    newCookie.Value = isSucessful;
+                    newCookie.Expires = DateTime.Now.AddHours(1); //expired dalam 1 jam
+                    Response.Cookies.Add(newCookie);
                 }
 
+                if(isSucessful == "Customer")
+                {
+                    Session["Role"] = "Customer";
+                    Response.Redirect("~/View/OrderSupplementPage.aspx");
+                }
+                else if(isSucessful == "Admin")
+                {
+                    Session["Role"] = "Admin";
+                    Response.Redirect("~/View/HomePage.aspx");
+                }
+
+                
                 Label_message.Text = isSucessful;
-                //Response.Redirect("~/View/LoginPage.aspx");
+              
             }
             else
             {
                 Label_message.Text = isSucessful;
             }
+        }
+
+        protected void btn_to_login_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/LoginPage.aspx");
+        }
+
+        protected void btn_to_register_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/RegisterPage.aspx");
         }
     }
 }

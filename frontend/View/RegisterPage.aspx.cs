@@ -36,6 +36,8 @@ namespace frontend.View
             {
                 Label_message.Text = isSucessful;
             }
+
+            
         }
     }
 }

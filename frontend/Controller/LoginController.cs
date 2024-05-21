@@ -19,7 +19,18 @@ namespace frontend.Controller
                 return "username length must between 5 and 15";
             }
 
-            return "login sucessfully";
+            GymMeService.GymMeWebService service = new GymMeService.GymMeWebService();
+            String loginResult = service.login(username, password);
+            if (loginResult == "login sucessfull")
+            {
+                return "login sucessfully";
+            }
+            else
+            {
+                return loginResult;
+            }
+            
+
         }
     }
 }

@@ -11,7 +11,10 @@ namespace frontend.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Role"] == null)
+            {
+                Response.Redirect("~/View/LoginPage.aspx");
+            }
         }
     }
 }

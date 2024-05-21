@@ -61,3 +61,5 @@ G:\project ASP.NET\GymMe\backend\obj\Debug\backend.csproj.CoreCompileInputs.cach
 G:\project ASP.NET\GymMe\backend\obj\Debug\backend.csproj.Up2Date
 G:\project ASP.NET\GymMe\backend\obj\Debug\backend.dll
 G:\project ASP.NET\GymMe\backend\obj\Debug\backend.pdb
+G:\project ASP.NET\GymMe\backend\bin\Newtonsoft.Json.dll
+G:\project ASP.NET\GymMe\backend\bin\Newtonsoft.Json.xml

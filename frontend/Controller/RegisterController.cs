@@ -34,6 +34,13 @@ namespace frontend.Controller
                 return "password must be same with confirm password";
             }
 
+            
+            GymMeService.GymMeWebService service = new GymMeService.GymMeWebService();
+
+            DateTime userDOB = DateTime.Parse(DOB);
+
+            service.registerNewUser(username, email, password, userDOB, gender, "Customer");
+
             return "register sucessfully";
         }
     }

@@ -38,6 +38,7 @@
     </Key>
     <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UserEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UserDOB" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="UserGender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -140,7 +141,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="GymMeSQLDatabaseEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="GymMeSQLDatabaseEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="MsCarts" EntityType="Self.MsCart" />
     <EntitySet Name="MsSupplements" EntityType="Self.MsSupplement" />
     <EntitySet Name="MsSupplementTypes" EntityType="Self.MsSupplementType" />

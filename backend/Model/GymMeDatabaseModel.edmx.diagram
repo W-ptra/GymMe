@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d2ccf5a2679a448f962ca092b06b3bd2" Name="Diagram1">
+      <Diagram DiagramId="a20b5d546def4071be91efc3534f3d63" Name="Diagram1">
         <EntityTypeShape EntityType="GymMeSQLDatabaseModel.MsCart" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="GymMeSQLDatabaseModel.MsSupplement" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GymMeSQLDatabaseModel.MsSupplementType" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="GymMeSQLDatabaseModel.MsUser" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="GymMeSQLDatabaseModel.TransactionHeader" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymMeSQLDatabaseModel.TransactionHeader" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="GymMeSQLDatabaseModel.TransactionDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="GymMeSQLDatabaseModel.FK_SupplementID" ManuallyRouted="false" />
         <AssociationConnector Association="GymMeSQLDatabaseModel.FK_UserID1" ManuallyRouted="false" />

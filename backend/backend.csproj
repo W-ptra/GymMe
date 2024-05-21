@@ -50,6 +50,9 @@
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -79,11 +82,11 @@
     <Content Include="App_Data\GymMeSQLDatabase_log.ldf">
       <DependentUpon>GymMeSQLDatabase.mdf</DependentUpon>
     </Content>
-    <Content Include="GymMeWebService.asmx" />
+    <Content Include="Service\GymMeWebService.asmx" />
     <Content Include="Model\GymMeDatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GymMeDatabaseModel.Context.cs</LastGenOutput>
       <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>GymMeDatabaseModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\GymMeDatabaseModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -93,7 +96,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GymMeWebService.asmx.cs">
+    <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Handler\UserHandler.cs" />
+    <Compile Include="Service\GymMeWebService.asmx.cs">
       <DependentUpon>GymMeWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
@@ -130,7 +135,10 @@
     <Compile Include="Model\TransactionHeader.cs">
       <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Module\json.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\DBInstance.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model\GymMeDatabaseModel.edmx">
@@ -148,12 +156,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Factory\" />
-    <Folder Include="Handler\" />
-    <Folder Include="Module\" />
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

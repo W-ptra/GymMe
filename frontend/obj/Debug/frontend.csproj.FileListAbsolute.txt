@@ -57,3 +57,9 @@ G:\project ASP.NET\GymMe\frontend\bin\Microsoft.CodeDom.Providers.DotNetCompiler
 G:\project ASP.NET\GymMe\frontend\obj\Debug\frontend.csproj.Up2Date
 G:\project ASP.NET\GymMe\frontend\obj\Debug\frontend.dll
 G:\project ASP.NET\GymMe\frontend\obj\Debug\frontend.pdb
+G:\project ASP.NET\GymMe\frontend\bin\EntityFramework.dll
+G:\project ASP.NET\GymMe\frontend\bin\EntityFramework.SqlServer.dll
+G:\project ASP.NET\GymMe\frontend\bin\Newtonsoft.Json.dll
+G:\project ASP.NET\GymMe\frontend\bin\EntityFramework.xml
+G:\project ASP.NET\GymMe\frontend\bin\EntityFramework.SqlServer.xml
+G:\project ASP.NET\GymMe\frontend\bin\Newtonsoft.Json.xml

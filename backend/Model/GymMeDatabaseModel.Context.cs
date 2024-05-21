@@ -13,10 +13,10 @@ namespace backend.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GymMeSQLDatabaseEntities : DbContext
+    public partial class GymMeSQLDatabaseEntities1 : DbContext
     {
-        public GymMeSQLDatabaseEntities()
-            : base("name=GymMeSQLDatabaseEntities")
+        public GymMeSQLDatabaseEntities1()
+            : base("name=GymMeSQLDatabaseEntities1")
         {
         }
     

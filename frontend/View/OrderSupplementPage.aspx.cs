@@ -32,7 +32,7 @@ namespace frontend.View
                 }
             }
 
-            GymMeService.GymMeWebService service = new GymMeService.GymMeWebService();
+            localhost.GymMeWebService service = new localhost.GymMeWebService();
             List<MsSupplement> supplementList = json<List<MsSupplement>>.decode(service.getSupplementList());
             GV.DataSource = supplementList;
             GV.DataBind();
@@ -57,6 +57,47 @@ namespace frontend.View
         {
             Session.Clear();
             Response.Redirect("~/View/LoginPage.aspx");
+        }
+
+        protected void GV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TB_ID.Text = GV.SelectedRow.Cells[1].Text;
+            TB_Name.Text = GV.SelectedRow.Cells[2].Text;
+            TB_Expiry.Text = GV.SelectedRow.Cells[3].Text;
+            TB_Price.Text = GV.SelectedRow.Cells[4].Text;
+        }
+
+        protected void btn_increaseQuantity_Click(object sender, EventArgs e)
+        {
+            String quantityStr = TB_Quantity.Text;
+            int quantity = int.Parse(quantityStr);
+            if (quantity > 999) return;
+            quantity += 1;
+            TB_Quantity.Text = quantity.ToString();
+        }
+
+        protected void btn_decressQuantity_Click(object sender, EventArgs e)
+        {
+            String quantityStr = TB_Quantity.Text;
+            int quantity = int.Parse(quantityStr);
+            if (quantity < 1) return;
+            quantity -= 1;
+            TB_Quantity.Text = quantity.ToString();
+        }
+
+        protected void btn_addToCart_Click(object sender, EventArgs e)
+        {
+            String quantityStr = TB_Quantity.Text;
+            int quantity = int.Parse(quantityStr);
+            if(quantity < 1)
+            {
+                label_message_add.Text = "Quantity can't negative or 0";
+            }
+        }
+
+        protected void btn_clearCart_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -42,7 +42,7 @@ namespace frontend.View
             String password = TB_Password.Text;
             Boolean isRememberMe = CheckBox.Checked;
 
-            String isSucessful = json<String>.decode(LoginController.login(username, password));
+            String isSucessful = LoginController.login(username, password);
 
             if (isSucessful == "Customer" || isSucessful == "Admin")
             {

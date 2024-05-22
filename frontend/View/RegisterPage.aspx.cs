@@ -39,5 +39,15 @@ namespace frontend.View
 
             
         }
+
+        protected void btn_to_login_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/LoginPage.aspx");
+        }
+
+        protected void btn_to_register_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/RegisterPage.aspx");
+        }
     }
 }

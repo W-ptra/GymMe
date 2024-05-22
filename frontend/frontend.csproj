@@ -55,6 +55,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -88,6 +89,7 @@
       <DependentUpon>GymMeModel1.edmx</DependentUpon>
       <LastGenOutput>GymMeModel1.cs</LastGenOutput>
     </Content>
+    <Content Include="View\css\login.css" />
     <Content Include="View\HistoryPage.aspx" />
     <Content Include="View\HomePage.aspx" />
     <Content Include="View\InsertSupplementPage.aspx" />
@@ -100,15 +102,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\GymMeService\GymMeWebService.disco" />
     <Content Include="View\TransactionDetailPage.aspx" />
     <Content Include="View\TransactionQueuePage.aspx" />
     <Content Include="View\UpdateSupplementPage.aspx" />
     <Content Include="View\ViewTransactionsReportPage.aspx" />
+    <None Include="Web References\localhost\GymMeWebService.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\OrderSupplementController.cs" />
     <Compile Include="Controller\RegisterController.cs" />
     <Compile Include="Model\GymMeModel1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -234,7 +237,7 @@
     <Compile Include="View\ViewTransactionsReportPage.aspx.designer.cs">
       <DependentUpon>ViewTransactionsReportPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Web References\GymMeService\Reference.cs">
+    <Compile Include="Web References\localhost\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -249,11 +252,11 @@
       <DependentUpon>GymMeModel1.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
-    <None Include="Web References\GymMeService\GymMeWebService.wsdl" />
-    <None Include="Web References\GymMeService\Reference.map">
+    <None Include="Web References\localhost\GymMeWebService.wsdl" />
+    <Content Include="Web References\localhost\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -266,7 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="View\css\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -277,7 +279,7 @@
   <ItemGroup>
     <WebReferenceUrl Include="https://localhost:44374/Service/GymMeWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\GymMeService\</RelPath>
+      <RelPath>Web References\localhost\</RelPath>
       <UpdateFromURL>https://localhost:44374/Service/GymMeWebService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>

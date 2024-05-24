@@ -1,4 +1,6 @@
-﻿using System;
+﻿using backend.Module;
+using frontend.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,7 +28,20 @@ namespace frontend.View
 
                 if (Session["Role"].ToString() == "Admin")
                 {
-                    Response.Redirect("~/View/HomePage.aspx");
+                    localhost.GymMeWebService service = new localhost.GymMeWebService();
+                    List<TransactionHeader> transactionHeaderList = json<List<TransactionHeader>>.decode(service.getAllTransactionHeader());
+                    GV.DataSource = transactionHeaderList;
+                    GV.DataBind();
+                    
+                }
+                else if (Session["Role"].ToString() == "Customer")
+                {
+                    String userIdStr = Session["UserId"].ToString();
+                    int userId = Convert.ToInt32(userIdStr);
+                    localhost.GymMeWebService service = new localhost.GymMeWebService();
+                    List<TransactionHeader> transactionHeaderList = json<List<TransactionHeader>>.decode(service.getAllTransactionHeaderById(userId));
+                    GV.DataSource = transactionHeaderList;
+                    GV.DataBind();
                 }
             }
         }
@@ -50,6 +65,18 @@ namespace frontend.View
         {
             Session.Clear();
             Response.Redirect("~/View/LoginPage.aspx");
+        }
+
+        protected void GV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String transactionId = GV.SelectedRow.Cells[1].Text;
+            String userId = GV.SelectedRow.Cells[2].Text;
+            String transactionDate = GV.SelectedRow.Cells[3].Text;
+            String status = GV.SelectedRow.Cells[4].Text;
+
+            String redirect = String.Format("~/View/TransactionDetailPage.aspx?transactionId={1}", transactionId, userId, transactionDate, status);
+
+            Response.Redirect(redirect);
         }
     }
 

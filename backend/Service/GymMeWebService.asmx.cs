@@ -94,5 +94,23 @@ namespace backend
         {
             TransactionHandler.createNewTransaction(id);
         }
+
+        [WebMethod]
+        public String getAllTransactionHeaderById(int id)
+        {
+            return json<List<TransactionHeader>>.encode(TransactionHandler.getAllTransactionHeaderById(id));
+        }
+
+        [WebMethod]
+        public String getAllTransactionHeader()
+        {
+            return json<List<TransactionHeader>>.encode(TransactionHandler.getAllTransactionHeader());
+        }
+
+        [WebMethod]
+        public String getAllTransactionDetailById(int id)
+        {
+            return json<List<TransactionDetail>>.encode(TransactionHandler.getAllTransactionDetail(id));
+        }
     }
 }

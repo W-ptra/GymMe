@@ -16,6 +16,15 @@
                 <asp:Button ID="btn_logout" runat="server" Text="Logout" OnClick="btn_logout_Click" />
             </nav>
             <h1>History Page</h1><br />
+            <asp:GridView ID="GV" runat="server" OnSelectedIndexChanged="GV_SelectedIndexChanged">
+                <Columns>
+                    <asp:TemplateField HeaderText="VIEW">
+                        <ItemTemplate>
+                            <asp:Button ID="btn_select" runat="server" Text="SELECT" UseSubmitBehavior="false" CommandName="select"/>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
         </div>
     </form>
 </body>

@@ -29,5 +29,20 @@ namespace backend.Handler
 
             CartRepository.deleteCart(userId);
         }
+
+        public static List<TransactionHeader> getAllTransactionHeaderById(int id)
+        {
+            return TransactionHeaderRepository.getAllTransactionDetailbyId(id);
+        }
+
+        public static List<TransactionHeader> getAllTransactionHeader()
+        {
+            return TransactionHeaderRepository.getAllTransactionHeader();
+        }
+
+        public static List<TransactionDetail> getAllTransactionDetail(int id)
+        {
+            return TransactionDetailRepository.GetAllTransactionDetailById(id);
+        }
     }
 }

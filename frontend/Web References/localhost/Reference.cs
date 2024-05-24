@@ -53,6 +53,12 @@ namespace frontend.localhost {
         
         private System.Threading.SendOrPostCallback createNewTransactionOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getAllTransactionHeaderByIdOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getAllTransactionHeaderOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getAllTransactionDetailByIdOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -126,6 +132,15 @@ namespace frontend.localhost {
         
         /// <remarks/>
         public event createNewTransactionCompletedEventHandler createNewTransactionCompleted;
+        
+        /// <remarks/>
+        public event getAllTransactionHeaderByIdCompletedEventHandler getAllTransactionHeaderByIdCompleted;
+        
+        /// <remarks/>
+        public event getAllTransactionHeaderCompletedEventHandler getAllTransactionHeaderCompleted;
+        
+        /// <remarks/>
+        public event getAllTransactionDetailByIdCompletedEventHandler getAllTransactionDetailByIdCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -493,6 +508,91 @@ namespace frontend.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getAllTransactionHeaderById", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string getAllTransactionHeaderById(int id) {
+            object[] results = this.Invoke("getAllTransactionHeaderById", new object[] {
+                        id});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getAllTransactionHeaderByIdAsync(int id) {
+            this.getAllTransactionHeaderByIdAsync(id, null);
+        }
+        
+        /// <remarks/>
+        public void getAllTransactionHeaderByIdAsync(int id, object userState) {
+            if ((this.getAllTransactionHeaderByIdOperationCompleted == null)) {
+                this.getAllTransactionHeaderByIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetAllTransactionHeaderByIdOperationCompleted);
+            }
+            this.InvokeAsync("getAllTransactionHeaderById", new object[] {
+                        id}, this.getAllTransactionHeaderByIdOperationCompleted, userState);
+        }
+        
+        private void OngetAllTransactionHeaderByIdOperationCompleted(object arg) {
+            if ((this.getAllTransactionHeaderByIdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getAllTransactionHeaderByIdCompleted(this, new getAllTransactionHeaderByIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getAllTransactionHeader", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string getAllTransactionHeader() {
+            object[] results = this.Invoke("getAllTransactionHeader", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getAllTransactionHeaderAsync() {
+            this.getAllTransactionHeaderAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getAllTransactionHeaderAsync(object userState) {
+            if ((this.getAllTransactionHeaderOperationCompleted == null)) {
+                this.getAllTransactionHeaderOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetAllTransactionHeaderOperationCompleted);
+            }
+            this.InvokeAsync("getAllTransactionHeader", new object[0], this.getAllTransactionHeaderOperationCompleted, userState);
+        }
+        
+        private void OngetAllTransactionHeaderOperationCompleted(object arg) {
+            if ((this.getAllTransactionHeaderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getAllTransactionHeaderCompleted(this, new getAllTransactionHeaderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getAllTransactionDetailById", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string getAllTransactionDetailById(int id) {
+            object[] results = this.Invoke("getAllTransactionDetailById", new object[] {
+                        id});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getAllTransactionDetailByIdAsync(int id) {
+            this.getAllTransactionDetailByIdAsync(id, null);
+        }
+        
+        /// <remarks/>
+        public void getAllTransactionDetailByIdAsync(int id, object userState) {
+            if ((this.getAllTransactionDetailByIdOperationCompleted == null)) {
+                this.getAllTransactionDetailByIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetAllTransactionDetailByIdOperationCompleted);
+            }
+            this.InvokeAsync("getAllTransactionDetailById", new object[] {
+                        id}, this.getAllTransactionDetailByIdOperationCompleted, userState);
+        }
+        
+        private void OngetAllTransactionDetailByIdOperationCompleted(object arg) {
+            if ((this.getAllTransactionDetailByIdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getAllTransactionDetailByIdCompleted(this, new getAllTransactionDetailByIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -712,6 +812,84 @@ namespace frontend.localhost {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void createNewTransactionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void getAllTransactionHeaderByIdCompletedEventHandler(object sender, getAllTransactionHeaderByIdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getAllTransactionHeaderByIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getAllTransactionHeaderByIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void getAllTransactionHeaderCompletedEventHandler(object sender, getAllTransactionHeaderCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getAllTransactionHeaderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getAllTransactionHeaderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void getAllTransactionDetailByIdCompletedEventHandler(object sender, getAllTransactionDetailByIdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getAllTransactionDetailByIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getAllTransactionDetailByIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
 }
 
 #pragma warning restore 1591

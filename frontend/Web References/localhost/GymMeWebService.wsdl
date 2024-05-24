@@ -152,6 +152,44 @@
       <s:element name="createNewTransactionResponse">
         <s:complexType />
       </s:element>
+      <s:element name="getAllTransactionHeaderById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllTransactionHeaderByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllTransactionHeaderByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllTransactionHeader">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllTransactionHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllTransactionHeaderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllTransactionDetailById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllTransactionDetailByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllTransactionDetailByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -226,6 +264,24 @@
   <wsdl:message name="createNewTransactionSoapOut">
     <wsdl:part name="parameters" element="tns:createNewTransactionResponse" />
   </wsdl:message>
+  <wsdl:message name="getAllTransactionHeaderByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllTransactionHeaderById" />
+  </wsdl:message>
+  <wsdl:message name="getAllTransactionHeaderByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllTransactionHeaderByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTransactionHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllTransactionHeader" />
+  </wsdl:message>
+  <wsdl:message name="getAllTransactionHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllTransactionHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTransactionDetailByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllTransactionDetailById" />
+  </wsdl:message>
+  <wsdl:message name="getAllTransactionDetailByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllTransactionDetailByIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="GymMeWebServiceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -274,6 +330,18 @@
     <wsdl:operation name="createNewTransaction">
       <wsdl:input message="tns:createNewTransactionSoapIn" />
       <wsdl:output message="tns:createNewTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactionHeaderById">
+      <wsdl:input message="tns:getAllTransactionHeaderByIdSoapIn" />
+      <wsdl:output message="tns:getAllTransactionHeaderByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactionHeader">
+      <wsdl:input message="tns:getAllTransactionHeaderSoapIn" />
+      <wsdl:output message="tns:getAllTransactionHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactionDetailById">
+      <wsdl:input message="tns:getAllTransactionDetailByIdSoapIn" />
+      <wsdl:output message="tns:getAllTransactionDetailByIdSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="GymMeWebServiceSoap" type="tns:GymMeWebServiceSoap">
@@ -386,6 +454,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAllTransactionHeaderById">
+      <soap:operation soapAction="http://tempuri.org/getAllTransactionHeaderById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactionHeader">
+      <soap:operation soapAction="http://tempuri.org/getAllTransactionHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactionDetailById">
+      <soap:operation soapAction="http://tempuri.org/getAllTransactionDetailById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="GymMeWebServiceSoap12" type="tns:GymMeWebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -490,6 +585,33 @@
     </wsdl:operation>
     <wsdl:operation name="createNewTransaction">
       <soap12:operation soapAction="http://tempuri.org/createNewTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactionHeaderById">
+      <soap12:operation soapAction="http://tempuri.org/getAllTransactionHeaderById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactionHeader">
+      <soap12:operation soapAction="http://tempuri.org/getAllTransactionHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactionDetailById">
+      <soap12:operation soapAction="http://tempuri.org/getAllTransactionDetailById" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

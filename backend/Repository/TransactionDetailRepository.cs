@@ -14,5 +14,12 @@ namespace backend.Repository
             db.TransactionDetails.AddRange(newTransactionDetail);
             db.SaveChanges();
         }
+
+        public static List<TransactionDetail> GetAllTransactionDetailById(int id)
+        {
+            GymMeSQLDatabaseEntitiesX db = DBInstance.getInstance();
+            List<TransactionDetail> TDlist = db.TransactionDetails.Where(TD => TD.TransactionID == id).ToList();
+            return TDlist;
+        }
     }
 }

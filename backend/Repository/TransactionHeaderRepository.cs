@@ -22,5 +22,18 @@ namespace backend.Repository
             currentTransacrionHeader.Status = status;
             db.SaveChanges();
         }
+
+        public static List<TransactionHeader> getAllTransactionDetailbyId(int id)
+        {
+            GymMeSQLDatabaseEntitiesX db = DBInstance.getInstance();
+            List<TransactionHeader> getAllTransactionHeader = db.TransactionHeaders.Where(TH => TH.UserId == id).ToList();
+            return getAllTransactionHeader;
+        }
+
+        public static List<TransactionHeader> getAllTransactionHeader()
+        {
+            GymMeSQLDatabaseEntitiesX db = DBInstance.getInstance();
+            return db.TransactionHeaders.ToList();
+        }
     }
 }

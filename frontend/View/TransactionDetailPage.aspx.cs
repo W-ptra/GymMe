@@ -1,4 +1,6 @@
-﻿using System;
+﻿using backend.Module;
+using frontend.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -24,40 +26,18 @@ namespace frontend.View
                     Response.Redirect("~/View/LoginPage.aspx");
                 }
 
-                if (Session["Role"].ToString() == "Customer")
-                {
-                    Response.Redirect("~/View/OrderSupplementPagePage.aspx");
-                }
+                String idStr = Request.QueryString["transactionId"];
+                int id = Convert.ToInt32(idStr);
+                localhost.GymMeWebService service = new localhost.GymMeWebService();
+                List<TransactionDetail> TDlist = json<List<TransactionDetail>>.decode(service.getAllTransactionDetailById(id));
+                GV.DataSource = TDlist;
+                GV.DataBind();
             }
         }
-        protected void btn_to_home_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/View/HomePage.aspx");
-        }
 
-        protected void btn_to_manage_supplement_Click(object sender, EventArgs e)
+        protected void btn_back_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/View/ManageSupplementPage.aspx");
-        }
-
-        protected void btn_to_queue_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/View/TransactionQueuePage.aspx");
-        }
-
-        protected void btn_to_transaction_report_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/View/TransactionDetailPage.aspx");
-        }
-        protected void btn_profile_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/View/ProfilePage.aspx");
-        }
-
-        protected void btn_logout_Click(object sender, EventArgs e)
-        {
-            Session.Clear();
-            Response.Redirect("~/View/LoginPage.aspx");
+            Response.Redirect("~/View/HistoryPage.aspx");
         }
     }
 }

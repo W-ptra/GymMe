@@ -222,13 +222,13 @@ namespace frontend.View
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// TextBox1 control.
+        /// TB_OldPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TB_OldPassword;
 
         /// <summary>
         /// Label8 control.
@@ -240,13 +240,22 @@ namespace frontend.View
         protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
-        /// TextBox2 control.
+        /// TB_NewPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox TB_NewPassword;
+
+        /// <summary>
+        /// label_password_change control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_password_change;
 
         /// <summary>
         /// btn_change_password control.

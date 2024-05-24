@@ -42,6 +42,36 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="updateUserProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DOB" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="role" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUserProfileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="changeUserPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="changeUserPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="changeUserPasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="getUser">
         <s:complexType>
           <s:sequence>
@@ -86,6 +116,18 @@
   <wsdl:message name="loginSoapOut">
     <wsdl:part name="parameters" element="tns:loginResponse" />
   </wsdl:message>
+  <wsdl:message name="updateUserProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:updateUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="updateUserProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:updateUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="changeUserPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:changeUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="changeUserPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:changeUserPasswordResponse" />
+  </wsdl:message>
   <wsdl:message name="getUserSoapIn">
     <wsdl:part name="parameters" element="tns:getUser" />
   </wsdl:message>
@@ -110,6 +152,14 @@
     <wsdl:operation name="login">
       <wsdl:input message="tns:loginSoapIn" />
       <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUserProfile">
+      <wsdl:input message="tns:updateUserProfileSoapIn" />
+      <wsdl:output message="tns:updateUserProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="changeUserPassword">
+      <wsdl:input message="tns:changeUserPasswordSoapIn" />
+      <wsdl:output message="tns:changeUserPasswordSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="getUser">
       <wsdl:input message="tns:getUserSoapIn" />
@@ -142,6 +192,24 @@
     </wsdl:operation>
     <wsdl:operation name="login">
       <soap:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUserProfile">
+      <soap:operation soapAction="http://tempuri.org/updateUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeUserPassword">
+      <soap:operation soapAction="http://tempuri.org/changeUserPassword" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -190,6 +258,24 @@
     </wsdl:operation>
     <wsdl:operation name="login">
       <soap12:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUserProfile">
+      <soap12:operation soapAction="http://tempuri.org/updateUserProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeUserPassword">
+      <soap12:operation soapAction="http://tempuri.org/changeUserPassword" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -35,6 +35,10 @@ namespace frontend.localhost {
         
         private System.Threading.SendOrPostCallback loginOperationCompleted;
         
+        private System.Threading.SendOrPostCallback updateUserProfileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback changeUserPasswordOperationCompleted;
+        
         private System.Threading.SendOrPostCallback getUserOperationCompleted;
         
         private System.Threading.SendOrPostCallback getSupplementListOperationCompleted;
@@ -85,6 +89,12 @@ namespace frontend.localhost {
         
         /// <remarks/>
         public event loginCompletedEventHandler loginCompleted;
+        
+        /// <remarks/>
+        public event updateUserProfileCompletedEventHandler updateUserProfileCompleted;
+        
+        /// <remarks/>
+        public event changeUserPasswordCompletedEventHandler changeUserPasswordCompleted;
         
         /// <remarks/>
         public event getUserCompletedEventHandler getUserCompleted;
@@ -185,6 +195,75 @@ namespace frontend.localhost {
             if ((this.loginCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.loginCompleted(this, new loginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateUserProfile", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void updateUserProfile(string username, string email, System.DateTime DOB, string gender, string role) {
+            this.Invoke("updateUserProfile", new object[] {
+                        username,
+                        email,
+                        DOB,
+                        gender,
+                        role});
+        }
+        
+        /// <remarks/>
+        public void updateUserProfileAsync(string username, string email, System.DateTime DOB, string gender, string role) {
+            this.updateUserProfileAsync(username, email, DOB, gender, role, null);
+        }
+        
+        /// <remarks/>
+        public void updateUserProfileAsync(string username, string email, System.DateTime DOB, string gender, string role, object userState) {
+            if ((this.updateUserProfileOperationCompleted == null)) {
+                this.updateUserProfileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateUserProfileOperationCompleted);
+            }
+            this.InvokeAsync("updateUserProfile", new object[] {
+                        username,
+                        email,
+                        DOB,
+                        gender,
+                        role}, this.updateUserProfileOperationCompleted, userState);
+        }
+        
+        private void OnupdateUserProfileOperationCompleted(object arg) {
+            if ((this.updateUserProfileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateUserProfileCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/changeUserPassword", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string changeUserPassword(string username, string oldPassword, string newPassword) {
+            object[] results = this.Invoke("changeUserPassword", new object[] {
+                        username,
+                        oldPassword,
+                        newPassword});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void changeUserPasswordAsync(string username, string oldPassword, string newPassword) {
+            this.changeUserPasswordAsync(username, oldPassword, newPassword, null);
+        }
+        
+        /// <remarks/>
+        public void changeUserPasswordAsync(string username, string oldPassword, string newPassword, object userState) {
+            if ((this.changeUserPasswordOperationCompleted == null)) {
+                this.changeUserPasswordOperationCompleted = new System.Threading.SendOrPostCallback(this.OnchangeUserPasswordOperationCompleted);
+            }
+            this.InvokeAsync("changeUserPassword", new object[] {
+                        username,
+                        oldPassword,
+                        newPassword}, this.changeUserPasswordOperationCompleted, userState);
+        }
+        
+        private void OnchangeUserPasswordOperationCompleted(object arg) {
+            if ((this.changeUserPasswordCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.changeUserPasswordCompleted(this, new changeUserPasswordCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -306,6 +385,36 @@ namespace frontend.localhost {
         private object[] results;
         
         internal loginCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void updateUserProfileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void changeUserPasswordCompletedEventHandler(object sender, changeUserPasswordCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class changeUserPasswordCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal changeUserPasswordCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

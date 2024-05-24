@@ -27,16 +27,29 @@ namespace backend
         }
 
         [WebMethod]
-        public void registerNewUser(String username,String email,String password,DateTime DOB,String gender,String role)
+        public void registerNewUser(String username, String email, String password, DateTime DOB, String gender, String role)
         {
-            UserHandler.registerNewUser(username,email,password,DOB,gender,role); 
+            UserHandler.registerNewUser(username, email, password, DOB, gender, role);
         }
 
         [WebMethod]
-        public String login(String username,String password)
+        public String login(String username, String password)
         {
             String result = UserHandler.login(username, password);
             return json<String>.encode(result);
+        }
+
+        [WebMethod]
+        public void updateUserProfile(String username, String email, DateTime DOB, String gender, String role)
+        {
+            UserHandler.updateUserProfile(username,email,DOB,gender,role);
+        }
+
+        [WebMethod]
+
+        public String changeUserPassword(String username,String oldPassword,String newPassword)
+        {
+            return json<Boolean>.encode(UserHandler.updatePassword(username,oldPassword,newPassword));
         }
 
         [WebMethod]
@@ -51,7 +64,6 @@ namespace backend
         {
             return json<List<MsSupplement>>.encode(SupplementHandler.getSupplement());
         }
-
 
     }
 }

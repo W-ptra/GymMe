@@ -1,5 +1,6 @@
 ﻿using backend.Module;
 using frontend.Controller;
+using frontend.Model;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -46,29 +47,35 @@ namespace frontend.View
 
             if (isSucessful == "Customer" || isSucessful == "Admin")
             {
+                localhost.GymMeWebService service = new localhost.GymMeWebService();
+                MsUser currentUser = json<MsUser>.decode(service.getUser(username));
+
                 if (isRememberMe)
                 {
                     HttpCookie roleCookie = createNewCookie("Role", isSucessful);
                     HttpCookie usernameCookie = createNewCookie("Username", username);
+                    HttpCookie userIdCookie = createNewCookie("UserId", currentUser.UserName);
 
                     Response.Cookies.Add(roleCookie);
+                    Response.Cookies.Add(userIdCookie);
                     Response.Cookies.Add(usernameCookie);
                 }
 
                 if(isSucessful == "Customer")
                 {
                     Session["Role"] = "Customer";
-                    Session["Username"] = username;
+                    Session["Username"] = currentUser.UserName;
+                    Session["UserId"] = currentUser.UserID;
                     Response.Redirect("~/View/OrderSupplementPage.aspx");
                 }
                 else if(isSucessful == "Admin")
                 {
                     Session["Role"] = "Admin";
-                    Session["Username"] = username;
+                    Session["Username"] = currentUser.UserName;
+                    Session["UserId"] = currentUser.UserID;
                     Response.Redirect("~/View/HomePage.aspx");
                 }
 
-                
                 Label_message.Text = isSucessful;
               
             }

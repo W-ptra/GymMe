@@ -112,6 +112,7 @@
   <ItemGroup>
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\OrderSupplementController.cs" />
+    <Compile Include="Controller\ProfileController.cs" />
     <Compile Include="Controller\RegisterController.cs" />
     <Compile Include="Model\GymMeModel1.Context.cs">
       <AutoGen>True</AutoGen>

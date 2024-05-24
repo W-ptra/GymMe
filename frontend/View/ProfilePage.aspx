@@ -31,7 +31,7 @@
                     <asp:Label ID="Label1" runat="server" Text="User ID"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_UserID" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_UserID" runat="server" Enabled="false"></asp:TextBox>
                 </div>
             </div>
             <div>
@@ -55,7 +55,7 @@
                     <asp:Label ID="Label4" runat="server" Text="User Date of Birth"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_DOB" runat="server" TextMode="DateTime"></asp:TextBox>
+                    <asp:TextBox ID="TB_DOB" runat="server" TextMode="Date"></asp:TextBox>
                 </div>
             </div>
             <div>
@@ -85,7 +85,7 @@
                     <asp:Label ID="Label7" runat="server" Text="Old Password"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_OldPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </div>
             </div>
             <div>
@@ -93,11 +93,16 @@
                     <asp:Label ID="Label8" runat="server" Text="New Password"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_NewPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </div>
             </div>
 
+            <div>
+                <asp:Label ID="label_password_change" runat="server" Text=""></asp:Label></div>
+
             <asp:Button ID="btn_change_password" runat="server" Text="Change Password" OnClick="btn_change_password_Click" />
+
+
 
         </div>
     </form>

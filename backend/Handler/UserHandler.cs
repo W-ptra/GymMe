@@ -37,14 +37,21 @@ namespace backend.Handler
             return UserRepository.getMsUser(username);
         }
 
-        public static void update(String username, String email, DateTime DOB, String gender, String role)
+        public static void updateUserProfile(String username, String email, DateTime DOB, String gender, String role)
         {
             UserRepository.updateMsUser(username, email, DOB, gender, role);
         }
 
-        public static void updatePassword(String username,String password)
+        public static Boolean updatePassword(String username,String oldPassword,String newPassword)
         {
-            UserRepository.updateMsUserPassword(username, password);
+            MsUser user = UserRepository.getMsUser(username);
+            if(user.Password != oldPassword)
+            {
+                return false;
+            }
+
+            UserRepository.updateMsUserPassword(username, newPassword);
+            return true;
         }
     }
 }

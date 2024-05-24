@@ -25,9 +25,16 @@ namespace frontend.View
                 {
                     Response.Redirect("~/View/LoginPage.aspx");
                 }
-
+                
                 String idStr = Request.QueryString["transactionId"];
-                int id = Convert.ToInt32(idStr);
+                
+                
+                if (Request.QueryString["permission"] == null)
+                {
+                    Response.Redirect("~/View/HistoryPage.aspx");
+                }
+                int id = int.Parse(idStr);
+                
                 localhost.GymMeWebService service = new localhost.GymMeWebService();
                 List<TransactionDetail> TDlist = json<List<TransactionDetail>>.decode(service.getAllTransactionDetailById(id));
                 GV.DataSource = TDlist;

@@ -19,6 +19,7 @@ namespace backend.Repository
         {
             GymMeSQLDatabaseEntitiesX db = DBInstance.getInstance();
             List<TransactionDetail> TDlist = db.TransactionDetails.Where(TD => TD.TransactionID == id).ToList();
+            //return db.TransactionDetails.ToList();
             return TDlist;
         }
     }

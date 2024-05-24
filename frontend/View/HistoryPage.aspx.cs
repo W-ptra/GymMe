@@ -70,11 +70,8 @@ namespace frontend.View
         protected void GV_SelectedIndexChanged(object sender, EventArgs e)
         {
             String transactionId = GV.SelectedRow.Cells[1].Text;
-            String userId = GV.SelectedRow.Cells[2].Text;
-            String transactionDate = GV.SelectedRow.Cells[3].Text;
-            String status = GV.SelectedRow.Cells[4].Text;
 
-            String redirect = String.Format("~/View/TransactionDetailPage.aspx?transactionId={1}", transactionId, userId, transactionDate, status);
+            String redirect = String.Format("~/View/TransactionDetailPage.aspx?transactionId={0}&permission={1}", transactionId,true);
 
             Response.Redirect(redirect);
         }

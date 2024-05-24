@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="GymMeSQLDatabaseModelStoreContainer" CdmEntityContainer="GymMeSQLDatabaseEntities">
+  <EntityContainerMapping StorageEntityContainer="GymMeSQLDatabaseModelStoreContainer" CdmEntityContainer="GymMeSQLDatabaseEntities2">
     <EntitySetMapping Name="MsCarts">
       <EntityTypeMapping TypeName="GymMeSQLDatabaseModel.MsCart">
         <MappingFragment StoreEntitySet="MsCart">
@@ -43,6 +43,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TransactionDetails">
+      <EntityTypeMapping TypeName="GymMeSQLDatabaseModel.TransactionDetail">
+        <MappingFragment StoreEntitySet="TransactionDetail">
+          <ScalarProperty Name="TransactionDetail_ID" ColumnName="TransactionDetail_ID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="SupplementID" ColumnName="SupplementID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TransactionHeaders">
       <EntityTypeMapping TypeName="GymMeSQLDatabaseModel.TransactionHeader">
         <MappingFragment StoreEntitySet="TransactionHeader">
@@ -50,15 +60,6 @@
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
           <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TransactionDetails">
-      <EntityTypeMapping TypeName="GymMeSQLDatabaseModel.TransactionDetail">
-        <MappingFragment StoreEntitySet="TransactionDetail">
-          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
-          <ScalarProperty Name="SupplementID" ColumnName="SupplementID" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

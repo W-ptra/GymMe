@@ -14,6 +14,7 @@ namespace frontend.Model
     
     public partial class TransactionDetail
     {
+        public int TransactionDetail_ID { get; set; }
         public int TransactionID { get; set; }
         public int SupplementID { get; set; }
         public int Quantity { get; set; }

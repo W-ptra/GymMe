@@ -86,6 +86,16 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getAllUser">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="getSupplementList">
         <s:complexType />
       </s:element>
@@ -95,6 +105,52 @@
             <s:element minOccurs="0" maxOccurs="1" name="getSupplementListResult" type="s:string" />
           </s:sequence>
         </s:complexType>
+      </s:element>
+      <s:element name="addNewCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="supplementId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addNewCartResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCartList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCartListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCartListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clearCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clearCartResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createNewTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createNewTransactionResponse">
+        <s:complexType />
       </s:element>
     </s:schema>
   </wsdl:types>
@@ -134,11 +190,41 @@
   <wsdl:message name="getUserSoapOut">
     <wsdl:part name="parameters" element="tns:getUserResponse" />
   </wsdl:message>
+  <wsdl:message name="getAllUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllUser" />
+  </wsdl:message>
+  <wsdl:message name="getAllUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllUserResponse" />
+  </wsdl:message>
   <wsdl:message name="getSupplementListSoapIn">
     <wsdl:part name="parameters" element="tns:getSupplementList" />
   </wsdl:message>
   <wsdl:message name="getSupplementListSoapOut">
     <wsdl:part name="parameters" element="tns:getSupplementListResponse" />
+  </wsdl:message>
+  <wsdl:message name="addNewCartSoapIn">
+    <wsdl:part name="parameters" element="tns:addNewCart" />
+  </wsdl:message>
+  <wsdl:message name="addNewCartSoapOut">
+    <wsdl:part name="parameters" element="tns:addNewCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCartListSoapIn">
+    <wsdl:part name="parameters" element="tns:getCartList" />
+  </wsdl:message>
+  <wsdl:message name="getCartListSoapOut">
+    <wsdl:part name="parameters" element="tns:getCartListResponse" />
+  </wsdl:message>
+  <wsdl:message name="clearCartSoapIn">
+    <wsdl:part name="parameters" element="tns:clearCart" />
+  </wsdl:message>
+  <wsdl:message name="clearCartSoapOut">
+    <wsdl:part name="parameters" element="tns:clearCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="createNewTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:createNewTransaction" />
+  </wsdl:message>
+  <wsdl:message name="createNewTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:createNewTransactionResponse" />
   </wsdl:message>
   <wsdl:portType name="GymMeWebServiceSoap">
     <wsdl:operation name="HelloWorld">
@@ -165,9 +251,29 @@
       <wsdl:input message="tns:getUserSoapIn" />
       <wsdl:output message="tns:getUserSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="getAllUser">
+      <wsdl:input message="tns:getAllUserSoapIn" />
+      <wsdl:output message="tns:getAllUserSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="getSupplementList">
       <wsdl:input message="tns:getSupplementListSoapIn" />
       <wsdl:output message="tns:getSupplementListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewCart">
+      <wsdl:input message="tns:addNewCartSoapIn" />
+      <wsdl:output message="tns:addNewCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCartList">
+      <wsdl:input message="tns:getCartListSoapIn" />
+      <wsdl:output message="tns:getCartListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="clearCart">
+      <wsdl:input message="tns:clearCartSoapIn" />
+      <wsdl:output message="tns:clearCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createNewTransaction">
+      <wsdl:input message="tns:createNewTransactionSoapIn" />
+      <wsdl:output message="tns:createNewTransactionSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="GymMeWebServiceSoap" type="tns:GymMeWebServiceSoap">
@@ -226,8 +332,53 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAllUser">
+      <soap:operation soapAction="http://tempuri.org/getAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getSupplementList">
       <soap:operation soapAction="http://tempuri.org/getSupplementList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewCart">
+      <soap:operation soapAction="http://tempuri.org/addNewCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCartList">
+      <soap:operation soapAction="http://tempuri.org/getCartList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearCart">
+      <soap:operation soapAction="http://tempuri.org/clearCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createNewTransaction">
+      <soap:operation soapAction="http://tempuri.org/createNewTransaction" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -292,8 +443,53 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAllUser">
+      <soap12:operation soapAction="http://tempuri.org/getAllUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getSupplementList">
       <soap12:operation soapAction="http://tempuri.org/getSupplementList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewCart">
+      <soap12:operation soapAction="http://tempuri.org/addNewCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCartList">
+      <soap12:operation soapAction="http://tempuri.org/getCartList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearCart">
+      <soap12:operation soapAction="http://tempuri.org/clearCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createNewTransaction">
+      <soap12:operation soapAction="http://tempuri.org/createNewTransaction" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

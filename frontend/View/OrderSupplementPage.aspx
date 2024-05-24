@@ -35,7 +35,7 @@
 
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_ID" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_ID" runat="server" Enabled="false"></asp:TextBox>
                 </div>
             </div>
             <div>
@@ -43,7 +43,7 @@
                     <asp:Label ID="Label2" runat="server" Text="Name"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_Name" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_Name" runat="server" Enabled="false"></asp:TextBox>
                 </div>
             </div>
             <div>
@@ -51,7 +51,7 @@
                     <asp:Label ID="Label3" runat="server" Text="Expiry Date"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_Expiry" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_Expiry" runat="server" Enabled="false"></asp:TextBox>
                 </div>   
             </div>
             <div>
@@ -59,7 +59,7 @@
                     <asp:Label ID="Label4" runat="server" Text="Price"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_Price" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_Price" runat="server" Enabled="false"></asp:TextBox>
                 </div>
             </div>
 
@@ -75,6 +75,7 @@
             <h2>Shopping Cart</h2>
             <asp:GridView ID="GV_Cart" runat="server"></asp:GridView>
             <asp:Button ID="btn_clearCart" runat="server" Text="Clear Cart" OnClick="btn_clearCart_Click"/>
+            <asp:Button ID="btn_checkOut" runat="server" Text="Check Out" OnClick="btn_checkOut_Click" />
         </div>
     </form>
 </body>

@@ -82,60 +82,68 @@
     <Content Include="App_Data\GymMeSQLDatabase_log.ldf">
       <DependentUpon>GymMeSQLDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="Model\GymMeModelX.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GymMeModelX.edmx</DependentUpon>
+      <LastGenOutput>GymMeModelX.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\GymMeModelX.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GymMeModelX.edmx</DependentUpon>
+      <LastGenOutput>GymMeModelX.cs</LastGenOutput>
+    </Content>
     <Content Include="Service\GymMeWebService.asmx" />
-    <Content Include="Model\GymMeDatabaseModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>GymMeDatabaseModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\GymMeDatabaseModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>GymMeDatabaseModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\CartFactory.cs" />
+    <Compile Include="Factory\TransactionDetailFactory.cs" />
+    <Compile Include="Factory\TransactionHeaderFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Handler\SupplementHandler.cs" />
+    <Compile Include="Handler\TransactionHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
+    <Compile Include="Model\GymMeModelX.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymMeModelX.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GymMeModelX.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymMeModelX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GymMeModelX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymMeModelX.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MsCart.cs">
+      <DependentUpon>GymMeModelX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MsSupplement.cs">
+      <DependentUpon>GymMeModelX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MsSupplementType.cs">
+      <DependentUpon>GymMeModelX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MsUser.cs">
+      <DependentUpon>GymMeModelX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransactionDetail.cs">
+      <DependentUpon>GymMeModelX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransactionHeader.cs">
+      <DependentUpon>GymMeModelX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\CartRepository.cs" />
     <Compile Include="Repository\SupplementRepository.cs" />
+    <Compile Include="Repository\TransactionDetailRepository.cs" />
+    <Compile Include="Repository\TransactionHeaderRepository.cs" />
     <Compile Include="Service\GymMeWebService.asmx.cs">
       <DependentUpon>GymMeWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Model\GymMeDatabaseModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GymMeDatabaseModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GymMeDatabaseModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GymMeDatabaseModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\MsCart.cs">
-      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\MsSupplement.cs">
-      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\MsSupplementType.cs">
-      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\MsUser.cs">
-      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TransactionDetail.cs">
-      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TransactionHeader.cs">
-      <DependentUpon>GymMeDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Module\json.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,12 +151,12 @@
     <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\GymMeDatabaseModel.edmx">
+    <EntityDeploy Include="Model\GymMeModelX.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GymMeDatabaseModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>GymMeModelX.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model\GymMeDatabaseModel.edmx.diagram">
-      <DependentUpon>GymMeDatabaseModel.edmx</DependentUpon>
+    <Content Include="Model\GymMeModelX.edmx.diagram">
+      <DependentUpon>GymMeModelX.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">

@@ -1,4 +1,5 @@
 ﻿using backend.Module;
+using frontend.Controller;
 using frontend.Model;
 using System;
 using System.Collections.Generic;
@@ -16,12 +17,16 @@ namespace frontend.View
             if (!IsPostBack)
             {
                 HttpCookie roleCookie = Request.Cookies["Role"];
-                if (roleCookie != null)
+                HttpCookie usernameCookie = Request.Cookies["Username"];
+                HttpCookie userIdCookie = Request.Cookies["UserId"];
+                if (roleCookie != null && userIdCookie != null && userIdCookie != null)
                 {
                     Session["Role"] = roleCookie.Value;
+                    Session["Username"] = usernameCookie.Value;
+                    Session["UserId"] = userIdCookie.Value;
                 }
 
-                if(Session["Role"] == null)
+                if (Session["Role"] == null || Session["Username"] == null || Session["UserId"] == null)
                 {
                     Response.Redirect("~/View/LoginPage.aspx");
                 }
@@ -32,9 +37,14 @@ namespace frontend.View
                 }
             }
 
+            int userId = int.Parse(Session["UserId"].ToString());
+
             localhost.GymMeWebService service = new localhost.GymMeWebService();
             List<MsSupplement> supplementList = json<List<MsSupplement>>.decode(service.getSupplementList());
+            List<MsCart> cartList = json<List<MsCart>>.decode(service.getCartList(userId));
+            GV_Cart.DataSource = cartList;
             GV.DataSource = supplementList;
+            GV_Cart.DataBind();
             GV.DataBind();
         }
 
@@ -87,17 +97,34 @@ namespace frontend.View
 
         protected void btn_addToCart_Click(object sender, EventArgs e)
         {
+
             String quantityStr = TB_Quantity.Text;
+            String userIdStr = Session["UserId"].ToString();
+            String supplementIdStr = TB_ID.Text;
             int quantity = int.Parse(quantityStr);
-            if(quantity < 1)
-            {
-                label_message_add.Text = "Quantity can't negative or 0";
-            }
+            int userId = int.Parse(userIdStr);
+            int supplementId = int.Parse(supplementIdStr);
+
+            label_message_add.Text = OrderSupplementController.addCartItem(userId,supplementId,quantity);
+            Response.Redirect("~/View/OrderSupplementPage.aspx");
         }
 
         protected void btn_clearCart_Click(object sender, EventArgs e)
         {
-            
+            String userIdStr = Session["UserId"].ToString();
+            int userId = int.Parse(userIdStr);
+
+            localhost.GymMeWebService service = new localhost.GymMeWebService();
+            service.clearCart(userId);
+            Response.Redirect("~/View/OrderSupplementPage.aspx");
+        }
+
+        protected void btn_checkOut_Click(object sender, EventArgs e)
+        {
+            String userIdStr = Session["UserId"].ToString();
+            int userId = int.Parse(userIdStr);
+            OrderSupplementController.checkoutTransaction(userId);         
+            Response.Redirect("~/View/OrderSupplementPage.aspx");
         }
     }
 }

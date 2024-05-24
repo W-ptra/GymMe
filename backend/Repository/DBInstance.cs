@@ -8,13 +8,13 @@ namespace backend.Repository
 {
     public class DBInstance
     {
-        private static GymMeSQLDatabaseEntities1 instance;
+        private static GymMeSQLDatabaseEntitiesX instance;
 
-        public static GymMeSQLDatabaseEntities1 getInstance()
+        public static GymMeSQLDatabaseEntitiesX getInstance()
         {
             if (instance == null)
             {
-                instance = new GymMeSQLDatabaseEntities1();
+                instance = new GymMeSQLDatabaseEntitiesX();
             }
             return instance;
         }

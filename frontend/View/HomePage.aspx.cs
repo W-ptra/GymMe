@@ -1,4 +1,6 @@
-﻿using System;
+﻿using backend.Module;
+using frontend.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,6 +30,11 @@ namespace frontend.View
                 {
                     Response.Redirect("~/View/OrderSupplementPagePage.aspx");
                 }
+
+                localhost.GymMeWebService service = new localhost.GymMeWebService();
+                List<MsUser> userList = json<List<MsUser>>.decode(service.getAllUser());
+                GV.DataSource = userList;
+                GV.DataBind();
             }
 
         }

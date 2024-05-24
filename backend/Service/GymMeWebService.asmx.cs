@@ -60,10 +60,39 @@ namespace backend
         }
 
         [WebMethod]
+        public String getAllUser()
+        {
+            return json<List<MsUser>>.encode(UserHandler.getAllUsers());
+        }
+
+        [WebMethod]
         public String getSupplementList()
         {
             return json<List<MsSupplement>>.encode(SupplementHandler.getSupplement());
         }
 
+        [WebMethod]
+        public void addNewCart(int userId,int supplementId,int quantity)
+        {
+            CartHandler.addNewCart(userId, supplementId, quantity);
+        }
+
+        [WebMethod]
+        public String getCartList(int id)
+        {
+            return json<List<MsCart>>.encode(CartHandler.GetAllCarts(id));
+        }
+
+        [WebMethod]
+        public void clearCart(int id)
+        {
+            CartHandler.removeCart(id);
+        }
+
+        [WebMethod]
+        public void createNewTransaction(int id)
+        {
+            TransactionHandler.createNewTransaction(id);
+        }
     }
 }

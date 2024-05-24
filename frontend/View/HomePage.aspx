@@ -18,6 +18,7 @@
                 <asp:Button ID="btn_logout" runat="server" Text="Logout" OnClick="btn_logout_Click" />
             </nav>
             <h1>Home Page</h1><br />
+            <asp:GridView ID="GV" runat="server"></asp:GridView>
         </div>
     </form>
 </body>

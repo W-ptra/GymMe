@@ -37,6 +37,11 @@ namespace backend.Handler
             return UserRepository.getMsUser(username);
         }
 
+        public static List<MsUser> getAllUsers()
+        {
+            return UserRepository.getAllMsUser();
+        }
+
         public static void updateUserProfile(String username, String email, DateTime DOB, String gender, String role)
         {
             UserRepository.updateMsUser(username, email, DOB, gender, role);

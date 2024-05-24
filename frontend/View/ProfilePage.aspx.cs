@@ -59,7 +59,6 @@ namespace frontend.View
                 TB_Role.Text = user.UserRole.ToString();
             }
         }
-
         protected void btn_order_supplement_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/View/OrderSupplementPage.aspx");

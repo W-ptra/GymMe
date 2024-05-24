@@ -79,15 +79,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\GymMeModel1.Context.tt">
+    <Content Include="Model\GymeMeModel1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GymMeModel1.Context.cs</LastGenOutput>
-      <DependentUpon>GymMeModel1.edmx</DependentUpon>
+      <DependentUpon>GymeMeModel1.edmx</DependentUpon>
+      <LastGenOutput>GymeMeModel1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\GymMeModel1.tt">
+    <Content Include="Model\GymeMeModel1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GymMeModel1.edmx</DependentUpon>
-      <LastGenOutput>GymMeModel1.cs</LastGenOutput>
+      <DependentUpon>GymeMeModel1.edmx</DependentUpon>
+      <LastGenOutput>GymeMeModel1.cs</LastGenOutput>
     </Content>
     <Content Include="View\css\login.css" />
     <Content Include="View\HistoryPage.aspx" />
@@ -98,6 +98,13 @@
     <Content Include="View\OrderSupplementPage.aspx" />
     <Content Include="View\ProfilePage.aspx" />
     <Content Include="View\RegisterPage.aspx" />
+    <EntityDeploy Include="Model\GymeMeModel1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GymeMeModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\GymeMeModel1.edmx.diagram">
+      <DependentUpon>GymeMeModel1.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,38 +121,38 @@
     <Compile Include="Controller\OrderSupplementController.cs" />
     <Compile Include="Controller\ProfileController.cs" />
     <Compile Include="Controller\RegisterController.cs" />
-    <Compile Include="Model\GymMeModel1.Context.cs">
+    <Compile Include="Model\GymeMeModel1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GymMeModel1.Context.tt</DependentUpon>
+      <DependentUpon>GymeMeModel1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\GymMeModel1.cs">
+    <Compile Include="Model\GymeMeModel1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GymMeModel1.tt</DependentUpon>
+      <DependentUpon>GymeMeModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\GymMeModel1.Designer.cs">
+    <Compile Include="Model\GymeMeModel1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GymMeModel1.edmx</DependentUpon>
+      <DependentUpon>GymeMeModel1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\MsCart.cs">
-      <DependentUpon>GymMeModel1.tt</DependentUpon>
+      <DependentUpon>GymeMeModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MsSupplement.cs">
-      <DependentUpon>GymMeModel1.tt</DependentUpon>
+      <DependentUpon>GymeMeModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MsSupplementType.cs">
-      <DependentUpon>GymMeModel1.tt</DependentUpon>
+      <DependentUpon>GymeMeModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MsUser.cs">
-      <DependentUpon>GymMeModel1.tt</DependentUpon>
+      <DependentUpon>GymeMeModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TransactionDetail.cs">
-      <DependentUpon>GymMeModel1.tt</DependentUpon>
+      <DependentUpon>GymeMeModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TransactionHeader.cs">
-      <DependentUpon>GymMeModel1.tt</DependentUpon>
+      <DependentUpon>GymeMeModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Module\json.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -245,13 +252,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\GymMeModel1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GymMeModel1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model\GymMeModel1.edmx.diagram">
-      <DependentUpon>GymMeModel1.edmx</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <None Include="Web References\localhost\GymMeWebService.wsdl" />
     <Content Include="Web References\localhost\Reference.map">

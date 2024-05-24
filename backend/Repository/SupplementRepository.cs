@@ -10,7 +10,7 @@ namespace backend.Repository
     {
         public static List<MsSupplement> getMsSupplementList()
         {
-            GymMeSQLDatabaseEntities1 db = DBInstance.getInstance();
+            GymMeSQLDatabaseEntitiesX db = DBInstance.getInstance();
             return db.MsSupplements.ToList();
         }
     }

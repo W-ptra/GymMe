@@ -31,6 +31,11 @@ namespace frontend.View
                     Response.Redirect("~/View/OrderSupplementPagePage.aspx");
                 }
 
+                if (Request.QueryString["permission"] == null)
+                {
+                    Response.Redirect("~/View/ManageSupplementPage.aspx");
+                }
+
                 TB_Id.Text = Request.QueryString["supplementId"];
                 TB_Name.Text = Request.QueryString["supplementName"];
                 TB_Date.Text = Request.QueryString["date"];

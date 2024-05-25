@@ -55,7 +55,7 @@
                     <asp:Label ID="Label4" runat="server" Text="User Date of Birth"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_DOB" runat="server" TextMode="Date"></asp:TextBox>
+                    <asp:TextBox ID="TB_DOB" runat="server"></asp:TextBox>
                 </div>
             </div>
             <div>
@@ -74,8 +74,10 @@
                     <asp:TextBox ID="TB_Role" runat="server"></asp:TextBox>
                 </div>
             </div>
+
+            <br />
             <div>
-                <asp:Label ID="label_messageUpdate" runat="server" Text=""></asp:Label>
+                <asp:Label ID="Label_update" runat="server" Text="Label"></asp:Label>
             </div>
             <asp:Button ID="btn_update_profile" runat="server" Text="Update Profile" OnClick="btn_update_profile_Click" />
 
@@ -100,8 +102,11 @@
                 </div>
             </div>
 
+            <br />
             <div>
-                <asp:Label ID="label_password_change" runat="server" Text=""></asp:Label></div>
+                <asp:Label ID="label_password_change" runat="server" Text=""></asp:Label>
+
+            </div>
 
             <asp:Button ID="btn_change_password" runat="server" Text="Change Password" OnClick="btn_change_password_Click" />
 

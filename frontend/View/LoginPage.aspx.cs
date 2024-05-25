@@ -54,7 +54,7 @@ namespace frontend.View
                 {
                     HttpCookie roleCookie = createNewCookie("Role", isSucessful);
                     HttpCookie usernameCookie = createNewCookie("Username", username);
-                    HttpCookie userIdCookie = createNewCookie("UserId", currentUser.UserName);
+                    HttpCookie userIdCookie = createNewCookie("UserId", currentUser.UserID.ToString());
 
                     Response.Cookies.Add(roleCookie);
                     Response.Cookies.Add(userIdCookie);

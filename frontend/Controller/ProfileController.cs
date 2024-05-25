@@ -1,6 +1,7 @@
 ﻿using backend.Module;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -12,24 +13,29 @@ namespace frontend.Controller
         {
             if (username == "" || email == "" || DOB == "" || gender == "")
             {
+                
                 return "Input can't empty";
             }
 
             if (username.Length < 5 || username.Length > 15)
             {
+                
                 return "username length must between 5 and 15";
             }
 
             if (!email.EndsWith(".com"))
             {
+                
                 return "Email must be ended with '.com'";
             }
 
             if (gender != "female" && gender != "male")
             {
+                
                 return "gender must be choose either male/female";
             }
 
+            
             DateTime userDOB = DateTime.Parse(DOB);
             int id = int.Parse(idStr);
             localhost.GymMeWebService service = new localhost.GymMeWebService();

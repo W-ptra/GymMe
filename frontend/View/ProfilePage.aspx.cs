@@ -3,6 +3,7 @@ using frontend.Controller;
 using frontend.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -76,6 +77,21 @@ namespace frontend.View
 
         protected void btn_logout_Click(object sender, EventArgs e)
         {
+            HttpCookie roleCookie = Request.Cookies["Role"];
+            HttpCookie usernameCookie = Request.Cookies["Username"];
+            HttpCookie userIdCookie = Request.Cookies["UserId"];
+
+            if (roleCookie != null || usernameCookie != null || userIdCookie != null)
+            {
+                roleCookie.Expires = DateTime.Now.AddDays(-1);
+                usernameCookie.Expires = DateTime.Now.AddDays(-1);
+                userIdCookie.Expires = DateTime.Now.AddDays(-1);
+
+                Response.Cookies.Add(roleCookie);
+                Response.Cookies.Add(usernameCookie);
+                Response.Cookies.Add(userIdCookie);
+            }
+
             Session.Clear();
             Response.Redirect("~/View/LoginPage.aspx");
         }
@@ -109,7 +125,23 @@ namespace frontend.View
             String gender = TB_Gender.Text;
             String role = TB_Role.Text;
 
-            label_password_change.Text = ProfileController.updateProfileValidation(id,username, email, DOB, gender, role);
+            Label_update.Text = ProfileController.updateProfileValidation(id,username, email, DOB, gender, role);
+
+            HttpCookie roleCookie = Request.Cookies["Role"];
+            HttpCookie usernameCookie = Request.Cookies["Username"];
+            HttpCookie userIdCookie = Request.Cookies["UserId"];
+
+            if (roleCookie != null || usernameCookie != null || userIdCookie != null)
+            {
+                roleCookie.Value = role;
+                usernameCookie.Value = username;
+                userIdCookie.Value = id;
+            }
+
+            Session["Role"] = role;
+            Session["Username"] = username;
+            Session["UserId"] = id;
+
             Response.Redirect("~/View/ProfilePage.aspx");
         }
 

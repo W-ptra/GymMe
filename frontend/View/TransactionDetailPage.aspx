@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Button ID="btn_back" runat="server" Text="<-- BACK" OnClick="btn_back_Click" />
+            <asp:Button ID="btn_back" runat="server" Text="<=== BACK" OnClick="btn_back_Click" />
             <h1>
                 Transaction Detail Page
             </h1>

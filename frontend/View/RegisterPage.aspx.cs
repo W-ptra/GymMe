@@ -13,7 +13,26 @@ namespace frontend.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                HttpCookie roleCookie = Request.Cookies["Role"];
+                if (roleCookie != null)
+                {
+                    Session["Role"] = roleCookie.Value;
+                }
 
+                if (Session["Role"] != null)
+                {
+                    if (Session["Role"].ToString() == "Customer")
+                    {
+                        Response.Redirect("~/View/OrderSupplementPage.aspx");
+                    }
+                    else if (Session["Role"].ToString() == "Admin")
+                    {
+                        Response.Redirect("~/View/HomePage.aspx");
+                    }
+                }
+            }
         }
 
         protected void btn_register_Click(object sender, EventArgs e)

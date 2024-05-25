@@ -17,7 +17,7 @@
                     <asp:Label ID="Label5" runat="server" Text="Id"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_Id" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TB_Id" runat="server" Enabled="false"></asp:TextBox>
                 </div>
             </div>
             <div>

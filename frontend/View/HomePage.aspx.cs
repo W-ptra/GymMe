@@ -68,6 +68,21 @@ namespace frontend.View
 
         protected void btn_logout_Click(object sender, EventArgs e)
         {
+            HttpCookie roleCookie = Request.Cookies["Role"];
+            HttpCookie usernameCookie = Request.Cookies["Username"];
+            HttpCookie userIdCookie = Request.Cookies["UserId"];
+
+            if (roleCookie != null || usernameCookie != null || userIdCookie != null)
+            {
+                roleCookie.Expires = DateTime.Now.AddDays(-1);
+                usernameCookie.Expires = DateTime.Now.AddDays(-1);
+                userIdCookie.Expires = DateTime.Now.AddDays(-1);
+
+                Response.Cookies.Add(roleCookie);
+                Response.Cookies.Add(usernameCookie);
+                Response.Cookies.Add(userIdCookie);
+            }
+
             Session.Clear();
             Response.Redirect("~/View/LoginPage.aspx");
         }

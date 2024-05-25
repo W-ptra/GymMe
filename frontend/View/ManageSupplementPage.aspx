@@ -29,6 +29,7 @@
             </asp:GridView>
 
             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+            <br />
             <asp:Button ID="btn_InsertSupplement" runat="server" Text="Insert Supplement" OnClick="btn_InsertSupplement_Click"/>
         </div>
     </form>

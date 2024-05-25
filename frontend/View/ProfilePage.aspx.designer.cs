@@ -204,13 +204,13 @@ namespace frontend.View
         protected global::System.Web.UI.WebControls.TextBox TB_Role;
 
         /// <summary>
-        /// label_messageUpdate control.
+        /// Label_update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label_messageUpdate;
+        protected global::System.Web.UI.WebControls.Label Label_update;
 
         /// <summary>
         /// btn_update_profile control.

@@ -69,6 +69,21 @@ namespace frontend.View
 
         protected void btn_logout_Click(object sender, EventArgs e)
         {
+            HttpCookie roleCookie = Request.Cookies["Role"];
+            HttpCookie usernameCookie = Request.Cookies["Username"];
+            HttpCookie userIdCookie = Request.Cookies["UserId"];
+
+            if (roleCookie != null || usernameCookie != null || userIdCookie != null)
+            {
+                roleCookie.Expires = DateTime.Now.AddDays(-1);
+                usernameCookie.Expires = DateTime.Now.AddDays(-1);
+                userIdCookie.Expires = DateTime.Now.AddDays(-1);
+
+                Response.Cookies.Add(roleCookie);
+                Response.Cookies.Add(usernameCookie);
+                Response.Cookies.Add(userIdCookie);
+            }
+
             Session.Clear();
             Response.Redirect("~/View/LoginPage.aspx");
         }
@@ -96,7 +111,7 @@ namespace frontend.View
             String date = row.Cells[4].Text;
             String typeId = row.Cells[5].Text;
 
-            String redirect = String.Format("~/View/UpdateSupplementPage.aspx?supplementId={0}&supplementName={1}&date={2}&price={3}&typeId={4}", supplementId, supplementName, price, date, typeId);
+            String redirect = String.Format("~/View/UpdateSupplementPage.aspx?supplementId={0}&supplementName={1}&date={2}&price={3}&typeId={4}&permission={5}", supplementId, supplementName, price, date, typeId,true);
             Response.Redirect(redirect);            
         }
     }

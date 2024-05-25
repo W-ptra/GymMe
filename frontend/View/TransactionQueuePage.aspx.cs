@@ -50,6 +50,10 @@ namespace frontend.View
         {
             Response.Redirect("~/View/TransactionDetailPage.aspx");
         }
+        protected void btn_history_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/HistoryPage.aspx");
+        }
         protected void btn_profile_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/View/ProfilePage.aspx");

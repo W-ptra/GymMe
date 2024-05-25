@@ -29,8 +29,6 @@ namespace frontend.localhost {
     [System.Web.Services.WebServiceBindingAttribute(Name="GymMeWebServiceSoap", Namespace="http://tempuri.org/")]
     public partial class GymMeWebService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback HelloWorldOperationCompleted;
-        
         private System.Threading.SendOrPostCallback registerNewUserOperationCompleted;
         
         private System.Threading.SendOrPostCallback loginOperationCompleted;
@@ -58,6 +56,12 @@ namespace frontend.localhost {
         private System.Threading.SendOrPostCallback getAllTransactionHeaderOperationCompleted;
         
         private System.Threading.SendOrPostCallback getAllTransactionDetailByIdOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback createNewSupplementOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateSupplementOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteSupplementOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -96,9 +100,6 @@ namespace frontend.localhost {
                 this.useDefaultCredentialsSetExplicitly = true;
             }
         }
-        
-        /// <remarks/>
-        public event HelloWorldCompletedEventHandler HelloWorldCompleted;
         
         /// <remarks/>
         public event registerNewUserCompletedEventHandler registerNewUserCompleted;
@@ -143,31 +144,13 @@ namespace frontend.localhost {
         public event getAllTransactionDetailByIdCompletedEventHandler getAllTransactionDetailByIdCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string HelloWorld() {
-            object[] results = this.Invoke("HelloWorld", new object[0]);
-            return ((string)(results[0]));
-        }
+        public event createNewSupplementCompletedEventHandler createNewSupplementCompleted;
         
         /// <remarks/>
-        public void HelloWorldAsync() {
-            this.HelloWorldAsync(null);
-        }
+        public event updateSupplementCompletedEventHandler updateSupplementCompleted;
         
         /// <remarks/>
-        public void HelloWorldAsync(object userState) {
-            if ((this.HelloWorldOperationCompleted == null)) {
-                this.HelloWorldOperationCompleted = new System.Threading.SendOrPostCallback(this.OnHelloWorldOperationCompleted);
-            }
-            this.InvokeAsync("HelloWorld", new object[0], this.HelloWorldOperationCompleted, userState);
-        }
-        
-        private void OnHelloWorldOperationCompleted(object arg) {
-            if ((this.HelloWorldCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.HelloWorldCompleted(this, new HelloWorldCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        public event deleteSupplementCompletedEventHandler deleteSupplementCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/registerNewUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -593,6 +576,104 @@ namespace frontend.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/createNewSupplement", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void createNewSupplement(string name, System.DateTime date, int price, int TypeId) {
+            this.Invoke("createNewSupplement", new object[] {
+                        name,
+                        date,
+                        price,
+                        TypeId});
+        }
+        
+        /// <remarks/>
+        public void createNewSupplementAsync(string name, System.DateTime date, int price, int TypeId) {
+            this.createNewSupplementAsync(name, date, price, TypeId, null);
+        }
+        
+        /// <remarks/>
+        public void createNewSupplementAsync(string name, System.DateTime date, int price, int TypeId, object userState) {
+            if ((this.createNewSupplementOperationCompleted == null)) {
+                this.createNewSupplementOperationCompleted = new System.Threading.SendOrPostCallback(this.OncreateNewSupplementOperationCompleted);
+            }
+            this.InvokeAsync("createNewSupplement", new object[] {
+                        name,
+                        date,
+                        price,
+                        TypeId}, this.createNewSupplementOperationCompleted, userState);
+        }
+        
+        private void OncreateNewSupplementOperationCompleted(object arg) {
+            if ((this.createNewSupplementCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.createNewSupplementCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateSupplement", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void updateSupplement(int supplementId, string name, System.DateTime date, int price, int TypeId) {
+            this.Invoke("updateSupplement", new object[] {
+                        supplementId,
+                        name,
+                        date,
+                        price,
+                        TypeId});
+        }
+        
+        /// <remarks/>
+        public void updateSupplementAsync(int supplementId, string name, System.DateTime date, int price, int TypeId) {
+            this.updateSupplementAsync(supplementId, name, date, price, TypeId, null);
+        }
+        
+        /// <remarks/>
+        public void updateSupplementAsync(int supplementId, string name, System.DateTime date, int price, int TypeId, object userState) {
+            if ((this.updateSupplementOperationCompleted == null)) {
+                this.updateSupplementOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateSupplementOperationCompleted);
+            }
+            this.InvokeAsync("updateSupplement", new object[] {
+                        supplementId,
+                        name,
+                        date,
+                        price,
+                        TypeId}, this.updateSupplementOperationCompleted, userState);
+        }
+        
+        private void OnupdateSupplementOperationCompleted(object arg) {
+            if ((this.updateSupplementCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateSupplementCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteSupplement", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void deleteSupplement(int supplementId) {
+            this.Invoke("deleteSupplement", new object[] {
+                        supplementId});
+        }
+        
+        /// <remarks/>
+        public void deleteSupplementAsync(int supplementId) {
+            this.deleteSupplementAsync(supplementId, null);
+        }
+        
+        /// <remarks/>
+        public void deleteSupplementAsync(int supplementId, object userState) {
+            if ((this.deleteSupplementOperationCompleted == null)) {
+                this.deleteSupplementOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteSupplementOperationCompleted);
+            }
+            this.InvokeAsync("deleteSupplement", new object[] {
+                        supplementId}, this.deleteSupplementOperationCompleted, userState);
+        }
+        
+        private void OndeleteSupplementOperationCompleted(object arg) {
+            if ((this.deleteSupplementCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteSupplementCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -608,32 +689,6 @@ namespace frontend.localhost {
                 return true;
             }
             return false;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
-    public delegate void HelloWorldCompletedEventHandler(object sender, HelloWorldCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class HelloWorldCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal HelloWorldCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
         }
     }
     
@@ -890,6 +945,18 @@ namespace frontend.localhost {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void createNewSupplementCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void updateSupplementCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void deleteSupplementCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

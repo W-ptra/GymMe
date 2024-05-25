@@ -28,6 +28,9 @@ namespace frontend.View
 
                 if (Session["Role"].ToString() == "Admin")
                 {
+
+                    btn_order_supplement.Visible = false;
+
                     localhost.GymMeWebService service = new localhost.GymMeWebService();
                     List<TransactionHeader> transactionHeaderList = json<List<TransactionHeader>>.decode(service.getAllTransactionHeader());
                     GV.DataSource = transactionHeaderList;
@@ -36,6 +39,11 @@ namespace frontend.View
                 }
                 else if (Session["Role"].ToString() == "Customer")
                 {
+                    btn_to_home.Visible = false;
+                    btn_to_manage_supplement.Visible = false;
+                    btn_to_order_queue.Visible = false;
+                    btn_to_transaction_report.Visible = false;
+
                     String userIdStr = Session["UserId"].ToString();
                     int userId = Convert.ToInt32(userIdStr);
                     localhost.GymMeWebService service = new localhost.GymMeWebService();
@@ -74,6 +82,26 @@ namespace frontend.View
             String redirect = String.Format("~/View/TransactionDetailPage.aspx?transactionId={0}&permission={1}", transactionId,true);
 
             Response.Redirect(redirect);
+        }
+
+        protected void btn_to_home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/HomePage.aspx");
+        }
+
+        protected void btn_to_manage_supplement_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/ManageSupplementPage.aspx");
+        }
+
+        protected void btn_to_queue_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/TransactionQueuePage.aspx");
+        }
+
+        protected void btn_to_transaction_report_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/TransactionDetailPage.aspx");
         }
     }
 

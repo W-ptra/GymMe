@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\ManageSupplementController.cs" />
     <Compile Include="Controller\OrderSupplementController.cs" />
     <Compile Include="Controller\ProfileController.cs" />
     <Compile Include="Controller\RegisterController.cs" />

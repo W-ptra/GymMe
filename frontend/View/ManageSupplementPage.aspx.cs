@@ -1,4 +1,6 @@
-﻿using System;
+﻿using backend.Module;
+using frontend.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,6 +30,11 @@ namespace frontend.View
                 {
                     Response.Redirect("~/View/OrderSupplementPagePage.aspx");
                 }
+
+                localhost.GymMeWebService service = new localhost.GymMeWebService();
+                List<MsSupplement> supplementList = json<List<MsSupplement>>.decode(service.getSupplementList());
+                GV.DataSource = supplementList;
+                GV.DataBind();
             }
         }
 
@@ -50,6 +57,10 @@ namespace frontend.View
         {
             Response.Redirect("~/View/TransactionDetailPage.aspx");
         }
+        protected void btn_history_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/HistoryPage.aspx");
+        }
         protected void btn_profile_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/View/ProfilePage.aspx");
@@ -59,6 +70,23 @@ namespace frontend.View
         {
             Session.Clear();
             Response.Redirect("~/View/LoginPage.aspx");
+        }
+
+        protected void btn_InsertSupplement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_delete(object sender, GridViewDeleteEventArgs e)
+        {
+            
+        }
+
+        protected void btn_update(object sender, GridViewEditEventArgs e)
+        {
+            GridViewRow row = GV.Rows[e.NewEditIndex];
+            String supplementId = row.Cells[0].Text;
+            Label1.Text = supplementId;
         }
     }
 }

@@ -10,6 +10,11 @@
     <form id="form1" runat="server">
         <div>
             <nav>
+                <asp:Button ID="btn_to_home" runat="server" Text="Home" OnClick="btn_to_home_Click" />
+                <asp:Button ID="btn_to_manage_supplement" runat="server" Text="Manage Supplement" OnClick="btn_to_manage_supplement_Click" />
+                <asp:Button ID="btn_to_order_queue" runat="server" Text="Order Queue" OnClick="btn_to_queue_Click" />
+                <asp:Button ID="btn_to_transaction_report" runat="server" Text="Transaction Report" OnClick="btn_to_transaction_report_Click" />
+
                 <asp:Button ID="btn_order_supplement" runat="server" Text="Order Supplement" OnClick="btn_order_supplement_Click" />
                 <asp:Button ID="btn_history" runat="server" Text="History" OnClick="btn_history_Click" />
                 <asp:Button ID="btn_profile" runat="server" Text="Profile" OnClick="btn_profile_Click" />

@@ -3,10 +3,71 @@
   "WorkspaceRootPath": "G:\\project ASP.NET\\GymMe\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\transactiondetailpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\managesupplementpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\managesupplementpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\historypage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\historypage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\updatesupplementpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\insertsupplementpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\transactiondetailpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\updatesupplementpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\insertsupplementpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\controller\\managesupplementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA76AC8C-05A6-488E-8C9B-EC3058E18036}|backend.csproj|g:\\project asp.net\\gymme\\backend\\service\\gymmewebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA76AC8C-05A6-488E-8C9B-EC3058E18036}|backend.csproj|solutionrelative:service\\gymmewebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA76AC8C-05A6-488E-8C9B-EC3058E18036}|backend.csproj|g:\\project asp.net\\gymme\\backend\\handler\\supplementhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA76AC8C-05A6-488E-8C9B-EC3058E18036}|backend.csproj|solutionrelative:handler\\supplementhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA76AC8C-05A6-488E-8C9B-EC3058E18036}|backend.csproj|g:\\project asp.net\\gymme\\backend\\repository\\supplementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA76AC8C-05A6-488E-8C9B-EC3058E18036}|backend.csproj|solutionrelative:repository\\supplementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA76AC8C-05A6-488E-8C9B-EC3058E18036}|backend.csproj|g:\\project asp.net\\gymme\\backend\\factory\\supplementfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA76AC8C-05A6-488E-8C9B-EC3058E18036}|backend.csproj|solutionrelative:factory\\supplementfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\transactionqueuepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\transactionqueuepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\profilepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\viewtransactionsreportpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B50799B-D728-47A3-AC62-B84B980230C3}|..\\frontend\\frontend.csproj|g:\\project asp.net\\gymme\\frontend\\view\\profilepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,27 +82,274 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ManageSupplementPage.aspx.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ManageSupplementPage.aspx.cs",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\ManageSupplementPage.aspx.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ManageSupplementPage.aspx.cs",
+              "RelativeToolTip": "..\\frontend\\View\\ManageSupplementPage.aspx.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAUwFgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:32:08.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManageSupplementPage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ManageSupplementPage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\ManageSupplementPage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ManageSupplementPage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\ManageSupplementPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-25T05:31:12.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HistoryPage.aspx.cs",
               "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HistoryPage.aspx.cs",
               "RelativeDocumentMoniker": "..\\frontend\\View\\HistoryPage.aspx.cs",
               "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HistoryPage.aspx.cs",
               "RelativeToolTip": "..\\frontend\\View\\HistoryPage.aspx.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAkwEUAAABKAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAQwFQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T17:49:37.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "HistoryPage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HistoryPage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\HistoryPage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HistoryPage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\HistoryPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-25T05:23:55.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateSupplementPage.aspx.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\UpdateSupplementPage.aspx.cs",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\UpdateSupplementPage.aspx.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\UpdateSupplementPage.aspx.cs",
+              "RelativeToolTip": "..\\frontend\\View\\UpdateSupplementPage.aspx.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAkwDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T06:34:52.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InsertSupplementPage.aspx.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\InsertSupplementPage.aspx.cs",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\InsertSupplementPage.aspx.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\InsertSupplementPage.aspx.cs",
+              "RelativeToolTip": "..\\frontend\\View\\InsertSupplementPage.aspx.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:48:24.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TransactionDetailPage.aspx.cs",
               "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\TransactionDetailPage.aspx.cs",
               "RelativeDocumentMoniker": "..\\frontend\\View\\TransactionDetailPage.aspx.cs",
               "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\TransactionDetailPage.aspx.cs",
               "RelativeToolTip": "..\\frontend\\View\\TransactionDetailPage.aspx.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAgwA0AAAAxAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAkwBUAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T17:49:28.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateSupplementPage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\UpdateSupplementPage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\UpdateSupplementPage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\UpdateSupplementPage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\UpdateSupplementPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-25T05:31:34.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InsertSupplementPage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\InsertSupplementPage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\InsertSupplementPage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\InsertSupplementPage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\InsertSupplementPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-25T05:31:04.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ManageSupplementController.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\Controller\\ManageSupplementController.cs",
+              "RelativeDocumentMoniker": "..\\frontend\\Controller\\ManageSupplementController.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\Controller\\ManageSupplementController.cs",
+              "RelativeToolTip": "..\\frontend\\Controller\\ManageSupplementController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwEQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:56:50.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GymMeWebService.asmx.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\backend\\Service\\GymMeWebService.asmx.cs",
+              "RelativeDocumentMoniker": "Service\\GymMeWebService.asmx.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\backend\\Service\\GymMeWebService.asmx.cs",
+              "RelativeToolTip": "Service\\GymMeWebService.asmx.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAqwHcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T06:22:06.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SupplementFactory.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\backend\\Factory\\SupplementFactory.cs",
+              "RelativeDocumentMoniker": "Factory\\SupplementFactory.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\backend\\Factory\\SupplementFactory.cs",
+              "RelativeToolTip": "Factory\\SupplementFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T06:09:26.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SupplementRepository.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\backend\\Repository\\SupplementRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\SupplementRepository.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\backend\\Repository\\SupplementRepository.cs",
+              "RelativeToolTip": "Repository\\SupplementRepository.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAgwC0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T06:12:11.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SupplementHandler.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\backend\\Handler\\SupplementHandler.cs",
+              "RelativeDocumentMoniker": "Handler\\SupplementHandler.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\backend\\Handler\\SupplementHandler.cs",
+              "RelativeToolTip": "Handler\\SupplementHandler.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwB4AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T06:16:57.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HomePage.aspx.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HomePage.aspx.cs",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\HomePage.aspx.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HomePage.aspx.cs",
+              "RelativeToolTip": "..\\frontend\\View\\HomePage.aspx.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAzwBgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:32:02.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TransactionQueuePage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\TransactionQueuePage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\TransactionQueuePage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\TransactionQueuePage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\TransactionQueuePage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-25T05:31:24.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TransactionQueuePage.aspx.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\TransactionQueuePage.aspx.cs",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\TransactionQueuePage.aspx.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\TransactionQueuePage.aspx.cs",
+              "RelativeToolTip": "..\\frontend\\View\\TransactionQueuePage.aspx.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAA5wDUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:32:23.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ViewTransactionsReportPage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ViewTransactionsReportPage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\ViewTransactionsReportPage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ViewTransactionsReportPage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\ViewTransactionsReportPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-25T05:31:39.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProfilePage.aspx.cs",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ProfilePage.aspx.cs",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\ProfilePage.aspx.cs",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ProfilePage.aspx.cs",
+              "RelativeToolTip": "..\\frontend\\View\\ProfilePage.aspx.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAQwC0AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:24:14.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HomePage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HomePage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\HomePage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\HomePage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\HomePage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-25T05:30:23.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProfilePage.aspx",
+              "DocumentMoniker": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ProfilePage.aspx",
+              "RelativeDocumentMoniker": "..\\frontend\\View\\ProfilePage.aspx",
+              "ToolTip": "G:\\project ASP.NET\\GymMe\\frontend\\View\\ProfilePage.aspx",
+              "RelativeToolTip": "..\\frontend\\View\\ProfilePage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-25T05:23:41.949Z",
               "EditorCaption": ""
             }
           ]

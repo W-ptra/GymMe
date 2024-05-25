@@ -45,7 +45,7 @@ namespace frontend.View
                 else if(sessionRole == "Admin")
                 {
                     btn_order_supplement.Visible = false;
-                    btn_history.Visible = false;
+                    
                 }
 
                 localhost.GymMeWebService service = new localhost.GymMeWebService();

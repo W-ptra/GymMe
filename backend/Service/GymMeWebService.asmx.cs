@@ -19,13 +19,6 @@ namespace backend
     // [System.Web.Script.Services.ScriptService]
     public class GymMeWebService : System.Web.Services.WebService
     {
-
-        [WebMethod]
-        public string HelloWorld()
-        {
-            return "Hello World";
-        }
-
         [WebMethod]
         public void registerNewUser(String username, String email, String password, DateTime DOB, String gender, String role)
         {
@@ -111,6 +104,24 @@ namespace backend
         public String getAllTransactionDetailById(int id)
         {
             return json<List<TransactionDetail>>.encode(TransactionHandler.getAllTransactionDetail(id));
+        }
+
+        [WebMethod]
+        public void createNewSupplement(String name,DateTime date,int price,int TypeId)
+        {
+            SupplementHandler.insertNewSupplement(name, date, price, TypeId);
+        }
+
+        [WebMethod]
+        public void updateSupplement(int supplementId, String name, DateTime date, int price, int TypeId)
+        {
+            SupplementHandler.updateSupplement(supplementId, name, date, price, TypeId);
+        }
+
+        [WebMethod]
+        public void deleteSupplement(int supplementId)
+        {
+            SupplementHandler.deleteSupplement(supplementId);
         }
     }
 }

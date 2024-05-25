@@ -32,8 +32,9 @@ namespace frontend.View
                 }
 
                 TB_Id.Text = Request.QueryString["supplementId"];
-                TB_Name.Text = Request.QueryString["name"];
+                TB_Name.Text = Request.QueryString["supplementName"];
                 TB_Date.Text = Request.QueryString["date"];
+                TB_Price.Text = Request.QueryString["price"];
                 TB_TypeId.Text = Request.QueryString["typeId"];
             }
         }

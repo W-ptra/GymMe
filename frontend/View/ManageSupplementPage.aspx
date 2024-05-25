@@ -22,7 +22,11 @@
                 Manage Supplement
             </h1>
 
-            <asp:GridView ID="GV" runat="server"></asp:GridView>
+            <asp:GridView ID="GV" runat="server" OnRowEditing="btn_update" OnRowDeleting="btn_delete">
+                <Columns>
+                    <asp:CommandField ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ButtonType="Button" ShowHeader="True" HeaderText="ACTION"></asp:CommandField>
+                </Columns>
+            </asp:GridView>
 
             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
             <asp:Button ID="btn_InsertSupplement" runat="server" Text="Insert Supplement" OnClick="btn_InsertSupplement_Click"/>

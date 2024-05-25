@@ -74,19 +74,27 @@ namespace frontend.View
 
         protected void btn_InsertSupplement_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/View/InsertSupplementPage.aspx");
         }
 
         protected void btn_delete(object sender, GridViewDeleteEventArgs e)
         {
-            
+            ;
+            Response.Redirect("~/View/HomePage.aspx");
         }
 
         protected void btn_update(object sender, GridViewEditEventArgs e)
         {
+
             GridViewRow row = GV.Rows[e.NewEditIndex];
-            String supplementId = row.Cells[0].Text;
-            Label1.Text = supplementId;
+            String supplementId = row.Cells[1].Text;
+            String supplementName = row.Cells[2].Text;
+            String price = row.Cells[3].Text;
+            String date = row.Cells[4].Text;
+            String typeId = row.Cells[5].Text;
+
+            String redirect = String.Format("~/View/UpdateSupplementPage.aspx?supplementId={0}&supplementName={1}&date={2}&price={3}&typeId={4}", supplementId, supplementName, price, date, typeId);
+            Response.Redirect(redirect);            
         }
     }
 }

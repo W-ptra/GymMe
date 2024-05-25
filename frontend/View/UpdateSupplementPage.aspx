@@ -33,7 +33,7 @@
                     <asp:Label ID="Label2" runat="server" Text="Expiry Date"></asp:Label>
                 </div>
                 <div>
-                    <asp:TextBox ID="TB_Date" runat="server" TextMode="Date"></asp:TextBox>
+                    <asp:TextBox ID="TB_Date" runat="server"></asp:TextBox>
                 </div>
             </div>
             <div>

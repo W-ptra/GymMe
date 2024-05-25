@@ -1,5 +1,9 @@
-﻿using System;
+﻿using backend.Module;
+using frontend.Model;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,8 +30,13 @@ namespace frontend.View
 
                 if (Session["Role"].ToString() == "Customer")
                 {
-                    Response.Redirect("~/View/OrderSupplementPagePage.aspx");
+                    Response.Redirect("~/View/OrderSupplementPage.aspx");
                 }
+
+                localhost.GymMeWebService service = new localhost.GymMeWebService();
+                List<TransactionHeader> THList = json<List<TransactionHeader>>.decode(service.getAllTransactionHeader());
+                GV.DataSource = THList;
+                GV.DataBind();
             }
         }
 
@@ -78,6 +87,23 @@ namespace frontend.View
 
             Session.Clear();
             Response.Redirect("~/View/LoginPage.aspx");
+        }
+
+        protected void GV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            String transactionIdStr = GV.SelectedRow.Cells[1].Text;
+            int transactionId = int.Parse(transactionIdStr);
+            String status = GV.SelectedRow.Cells[4].Text;
+            
+            if(status != "Handled")
+            {
+                localhost.GymMeWebService service = new localhost.GymMeWebService();
+                service.updateTransactionStatus(transactionId);
+
+                Response.Redirect("~/View/TransactionQueuePage.aspx");
+            }
+
         }
     }
 }

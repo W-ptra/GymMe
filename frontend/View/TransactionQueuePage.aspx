@@ -22,16 +22,17 @@
                     Order Queue
                 </h1>
 
-            <asp:GridView ID="GV" runat="server">
+            <asp:GridView ID="GV" runat="server" OnSelectedIndexChanged="GV_SelectedIndexChanged">
                 <Columns>
                     <asp:TemplateField HeaderText="ACTION">
                         <ItemTemplate>
-                            <asp:Button ID="Button1" runat="server" Text="HANDLE" />
+                            <asp:Button ID="btn_add_supplement" runat="server" Text="HANDLE" CommandName="Select" UseSubmitBehavior="false" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
-            </asp:GridView>
 
+            </asp:GridView>
+            
         </div>
     </form>
 </body>

@@ -107,6 +107,12 @@ namespace backend
         }
 
         [WebMethod]
+        public void updateTransactionStatus(int id)
+        {
+            TransactionHandler.updateTransactionHeaderStatus(id);
+        }
+
+        [WebMethod]
         public void createNewSupplement(String name,DateTime date,int price,int TypeId)
         {
             SupplementHandler.insertNewSupplement(name, date, price, TypeId);

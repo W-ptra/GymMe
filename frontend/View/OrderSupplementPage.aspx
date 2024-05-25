@@ -18,7 +18,7 @@
 
             <asp:GridView ID="GV" runat="server" OnSelectedIndexChanged="GV_SelectedIndexChanged">
                 <Columns>
-                    <asp:TemplateField HeaderText="SELECT">
+                    <asp:TemplateField HeaderText="ACTION">
                         <ItemTemplate>
                             <asp:Button ID="btn_add_supplement" runat="server" Text="SELECT" CommandName="Select" UseSubmitBehavior="false" />
                         </ItemTemplate>

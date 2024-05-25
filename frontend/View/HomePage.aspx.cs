@@ -28,7 +28,7 @@ namespace frontend.View
 
                 if (Session["Role"].ToString() == "Customer")
                 {
-                    Response.Redirect("~/View/OrderSupplementPagePage.aspx");
+                    Response.Redirect("~/View/OrderSupplementPage.aspx");
                 }
 
                 localhost.GymMeWebService service = new localhost.GymMeWebService();

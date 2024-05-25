@@ -185,6 +185,16 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="updateTransactionStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateTransactionStatusResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="createNewSupplement">
         <s:complexType>
           <s:sequence>
@@ -308,6 +318,12 @@
   <wsdl:message name="getAllTransactionDetailByIdSoapOut">
     <wsdl:part name="parameters" element="tns:getAllTransactionDetailByIdResponse" />
   </wsdl:message>
+  <wsdl:message name="updateTransactionStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:updateTransactionStatus" />
+  </wsdl:message>
+  <wsdl:message name="updateTransactionStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:updateTransactionStatusResponse" />
+  </wsdl:message>
   <wsdl:message name="createNewSupplementSoapIn">
     <wsdl:part name="parameters" element="tns:createNewSupplement" />
   </wsdl:message>
@@ -382,6 +398,10 @@
     <wsdl:operation name="getAllTransactionDetailById">
       <wsdl:input message="tns:getAllTransactionDetailByIdSoapIn" />
       <wsdl:output message="tns:getAllTransactionDetailByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTransactionStatus">
+      <wsdl:input message="tns:updateTransactionStatusSoapIn" />
+      <wsdl:output message="tns:updateTransactionStatusSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="createNewSupplement">
       <wsdl:input message="tns:createNewSupplementSoapIn" />
@@ -517,6 +537,15 @@
     </wsdl:operation>
     <wsdl:operation name="getAllTransactionDetailById">
       <soap:operation soapAction="http://tempuri.org/getAllTransactionDetailById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTransactionStatus">
+      <soap:operation soapAction="http://tempuri.org/updateTransactionStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -673,6 +702,15 @@
     </wsdl:operation>
     <wsdl:operation name="getAllTransactionDetailById">
       <soap12:operation soapAction="http://tempuri.org/getAllTransactionDetailById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTransactionStatus">
+      <soap12:operation soapAction="http://tempuri.org/updateTransactionStatus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

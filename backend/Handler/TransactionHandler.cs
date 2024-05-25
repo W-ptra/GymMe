@@ -44,5 +44,10 @@ namespace backend.Handler
         {
             return TransactionDetailRepository.GetAllTransactionDetailById(id);
         }
+
+        public static void updateTransactionHeaderStatus(int id)
+        {
+            TransactionHeaderRepository.updateStatus(id, "Handled");
+        }
     }
 }

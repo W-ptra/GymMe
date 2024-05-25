@@ -57,6 +57,8 @@ namespace frontend.localhost {
         
         private System.Threading.SendOrPostCallback getAllTransactionDetailByIdOperationCompleted;
         
+        private System.Threading.SendOrPostCallback updateTransactionStatusOperationCompleted;
+        
         private System.Threading.SendOrPostCallback createNewSupplementOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateSupplementOperationCompleted;
@@ -142,6 +144,9 @@ namespace frontend.localhost {
         
         /// <remarks/>
         public event getAllTransactionDetailByIdCompletedEventHandler getAllTransactionDetailByIdCompleted;
+        
+        /// <remarks/>
+        public event updateTransactionStatusCompletedEventHandler updateTransactionStatusCompleted;
         
         /// <remarks/>
         public event createNewSupplementCompletedEventHandler createNewSupplementCompleted;
@@ -579,6 +584,34 @@ namespace frontend.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateTransactionStatus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void updateTransactionStatus(int id) {
+            this.Invoke("updateTransactionStatus", new object[] {
+                        id});
+        }
+        
+        /// <remarks/>
+        public void updateTransactionStatusAsync(int id) {
+            this.updateTransactionStatusAsync(id, null);
+        }
+        
+        /// <remarks/>
+        public void updateTransactionStatusAsync(int id, object userState) {
+            if ((this.updateTransactionStatusOperationCompleted == null)) {
+                this.updateTransactionStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateTransactionStatusOperationCompleted);
+            }
+            this.InvokeAsync("updateTransactionStatus", new object[] {
+                        id}, this.updateTransactionStatusOperationCompleted, userState);
+        }
+        
+        private void OnupdateTransactionStatusOperationCompleted(object arg) {
+            if ((this.updateTransactionStatusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateTransactionStatusCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/createNewSupplement", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void createNewSupplement(string name, System.DateTime date, int price, int TypeId) {
             this.Invoke("createNewSupplement", new object[] {
@@ -970,6 +1003,10 @@ namespace frontend.localhost {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void updateTransactionStatusCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]

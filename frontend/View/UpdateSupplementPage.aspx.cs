@@ -52,7 +52,7 @@ namespace frontend.View
 
             ManageSupplementController.updateSupplement(id, name, date, price, typeId);
 
-            label_message.Text = "Sucessfully update";
+            Response.Redirect("~/View/ManageSupplementPage.aspx");
         }
     }
 }

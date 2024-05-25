@@ -7,9 +7,9 @@ namespace frontend.Controller
 {
     public class ManageSupplementController
     {
-        public static String insertSupplement(String name,String date,int price,int typeId)
+        public static String insertSupplement(String name,String date,String priceStr,String typeIdStr)
         {
-            if(name == "" || date == "" || price <= 0 || typeId <= 0)
+            if(name == "" || date == "" || priceStr == "" || typeIdStr == "")
             {
                 return "Input can't empty, 0, or negative";
             }
@@ -19,6 +19,8 @@ namespace frontend.Controller
                 return "Name must contain word 'Supplement' on it";
             }
 
+            int price = int.Parse(priceStr);
+            int typeId = int.Parse(typeIdStr);
             if(price < 3000)
             {
                 return "price must be at least 3000";

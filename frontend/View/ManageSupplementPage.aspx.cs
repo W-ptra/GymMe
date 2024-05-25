@@ -1,4 +1,5 @@
 ﻿using backend.Module;
+using frontend.Controller;
 using frontend.Model;
 using System;
 using System.Collections.Generic;
@@ -79,8 +80,10 @@ namespace frontend.View
 
         protected void btn_delete(object sender, GridViewDeleteEventArgs e)
         {
-            ;
-            Response.Redirect("~/View/HomePage.aspx");
+            GridViewRow row = GV.Rows[e.RowIndex];
+            String idStr = row.Cells[1].Text;
+            ManageSupplementController.deleteSupplement(int.Parse(idStr));
+            Response.Redirect("~/View/ManageSupplementPage.aspx");
         }
 
         protected void btn_update(object sender, GridViewEditEventArgs e)

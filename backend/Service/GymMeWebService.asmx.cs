@@ -33,13 +33,13 @@ namespace backend
         }
 
         [WebMethod]
-        public void updateUserProfile(String username, String email, DateTime DOB, String gender, String role)
+        public String updateUserProfile(int id,String username, String email, DateTime DOB, String gender, String role)
         {
-            UserHandler.updateUserProfile(username,email,DOB,gender,role);
+            UserHandler.updateUserProfile(id,username,email,DOB,gender,role);
+            return json<String>.encode("sucessfull");
         }
 
         [WebMethod]
-
         public String changeUserPassword(String username,String oldPassword,String newPassword)
         {
             return json<Boolean>.encode(UserHandler.updatePassword(username,oldPassword,newPassword));

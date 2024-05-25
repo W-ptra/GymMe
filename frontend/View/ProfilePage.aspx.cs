@@ -102,13 +102,14 @@ namespace frontend.View
 
         protected void btn_update_profile_Click(object sender, EventArgs e)
         {
+            String id = TB_UserID.Text;
             String username = TB_Username.Text;
             String email = TB_Email.Text;
             String DOB = TB_DOB.Text;
             String gender = TB_Gender.Text;
             String role = TB_Role.Text;
 
-            ProfileController.updateProfileValidation(username, email, DOB, gender, role);
+            label_password_change.Text = ProfileController.updateProfileValidation(id,username, email, DOB, gender, role);
             Response.Redirect("~/View/ProfilePage.aspx");
         }
 

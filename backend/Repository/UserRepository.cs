@@ -27,11 +27,17 @@ namespace backend.Repository
             return db.MsUsers.Where((u)=> u.UserName == username).ToList().FirstOrDefault();
         }
 
-        
-        public static void updateMsUser(String username,String email,DateTime DOB,String gender, String role)
+        public static MsUser getMsUserById(int id)
         {
             GymMeSQLDatabaseEntitiesX db = DBInstance.getInstance();
-            MsUser currentMsUser = getMsUser(username);
+            return db.MsUsers.Where((u) => u.UserID == id).ToList().FirstOrDefault();
+        }
+
+        
+        public static void updateMsUser(int id,String username,String email,DateTime DOB,String gender, String role)
+        {
+            GymMeSQLDatabaseEntitiesX db = DBInstance.getInstance();
+            MsUser currentMsUser = getMsUserById(id);
             currentMsUser.UserName = username;
             currentMsUser.UserEmail = email;
             currentMsUser.UserDOB = DOB;

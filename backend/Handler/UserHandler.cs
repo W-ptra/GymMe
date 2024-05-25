@@ -42,9 +42,9 @@ namespace backend.Handler
             return UserRepository.getAllMsUser();
         }
 
-        public static void updateUserProfile(String username, String email, DateTime DOB, String gender, String role)
+        public static void updateUserProfile(int id,String username, String email, DateTime DOB, String gender, String role)
         {
-            UserRepository.updateMsUser(username, email, DOB, gender, role);
+            UserRepository.updateMsUser(id,username, email, DOB, gender, role);
         }
 
         public static Boolean updatePassword(String username,String oldPassword,String newPassword)

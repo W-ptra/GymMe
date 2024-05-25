@@ -21,6 +21,17 @@
                 <h1>
                     Order Queue
                 </h1>
+
+            <asp:GridView ID="GV" runat="server">
+                <Columns>
+                    <asp:TemplateField HeaderText="ACTION">
+                        <ItemTemplate>
+                            <asp:Button ID="Button1" runat="server" Text="HANDLE" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+
         </div>
     </form>
 </body>

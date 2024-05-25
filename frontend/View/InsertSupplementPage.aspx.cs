@@ -42,10 +42,12 @@ namespace frontend.View
         {
             String name = TB_Name.Text;
             String date = TB_Date.Text;
-            int price = int.Parse(TB_Price.Text);
-            int typeId = int.Parse(TB_TypeId.Text);
+            String price = TB_Price.Text;
+            String typeId = TB_TypeId.Text;
+
 
             label_message.Text = ManageSupplementController.insertSupplement(name, date, price, typeId);
+            Response.Redirect("~/View/InsertSupplementPage.aspx");
         }
     }
 }

@@ -46,7 +46,7 @@
             </div>
             <br />
             <div>
-                <asp:Label ID="label_message" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="label_message" runat="server" Text=""></asp:Label>
             </div>
             <asp:Button ID="btn_insert" runat="server" Text="INSERT" OnClick="btn_insert_Click" />
         </div>

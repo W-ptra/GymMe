@@ -74,6 +74,9 @@
                     <asp:TextBox ID="TB_Role" runat="server"></asp:TextBox>
                 </div>
             </div>
+            <div>
+                <asp:Label ID="label_messageUpdate" runat="server" Text=""></asp:Label>
+            </div>
             <asp:Button ID="btn_update_profile" runat="server" Text="Update Profile" OnClick="btn_update_profile_Click" />
 
             <br />

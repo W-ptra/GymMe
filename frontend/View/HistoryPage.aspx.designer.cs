@@ -60,22 +60,13 @@ namespace frontend.View
         protected global::System.Web.UI.WebControls.Button btn_to_transaction_report;
 
         /// <summary>
-        /// btn_order_supplement control.
+        /// btn_logout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_order_supplement;
-
-        /// <summary>
-        /// btn_history control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_history;
+        protected global::System.Web.UI.WebControls.Button btn_logout;
 
         /// <summary>
         /// btn_profile control.
@@ -87,13 +78,22 @@ namespace frontend.View
         protected global::System.Web.UI.WebControls.Button btn_profile;
 
         /// <summary>
-        /// btn_logout control.
+        /// btn_history control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_logout;
+        protected global::System.Web.UI.WebControls.Button btn_history;
+
+        /// <summary>
+        /// btn_order_supplement control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_order_supplement;
 
         /// <summary>
         /// GV control.

@@ -90,6 +90,11 @@
       <LastGenOutput>GymeMeModel1.cs</LastGenOutput>
     </Content>
     <Content Include="View\css\login.css" />
+    <Content Include="View\css\LoginRegister.css" />
+    <Content Include="View\css\mainStyle.css" />
+    <Content Include="View\css\orderSupplement.css" />
+    <Content Include="View\css\register.css" />
+    <Content Include="View\css\table.css" />
     <Content Include="View\HistoryPage.aspx" />
     <Content Include="View\HomePage.aspx" />
     <Content Include="View\InsertSupplementPage.aspx" />
@@ -271,6 +276,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Dataset\" />
+    <Folder Include="Report\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

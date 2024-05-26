@@ -21,7 +21,7 @@ namespace backend.Handler
             MsUser currentUser = UserRepository.getMsUser(username);
             if (currentUser == null) 
             {
-                return "user not exits";
+                return "user not exist";
             }
 
             if(currentUser.Password != password)

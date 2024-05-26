@@ -1,0 +1,51 @@
+﻿.order_supplement_lower_part{
+    display:flex;
+    flex-direction:row;
+}
+
+.order_supplement_lower_part .form,.order_supplement_lower_part .cart{
+    align-items:center;
+    padding:2rem;
+    
+    width:25rem;
+    display:flex;
+    flex-direction:column;
+
+}
+
+#TB_ID,#TB_Name,#TB_Expiry,#TB_Price{
+    width:15rem;
+}
+
+#TB_Quantity{
+    width:3rem;
+}
+
+#btn_increaseQuantity,#btn_decressQuantity,#btn_addToCart{
+    width:3rem; 
+    background-color:deepskyblue;
+    color:white;
+    border-color:transparent;
+    border-radius:0.3rem;
+    cursor:pointer;
+}
+#btn_increaseQuantity:hover, #btn_decressQuantity:hover, #btn_addToCart:hover {
+    color:deepskyblue;
+    background-color:transparent;
+    border: 1px solid deepskyblue;
+}
+
+.cart input {
+    width: 6rem;
+    background-color: deepskyblue;
+    color: white;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.cart input:hover{
+    color:deepskyblue;
+    background-color:transparent;
+    border: 1px solid deepskyblue;
+}

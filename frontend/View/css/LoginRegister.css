@@ -1,0 +1,47 @@
+﻿.form {
+    border: 1px solid black;
+    border-radius:1rem;
+    
+    margin-top:0rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.form h1{
+    font-size:2rem;
+    margin-top:2rem;
+    margin-bottom:1rem;
+}
+
+.form .remember_me{
+    margin-top:0.5rem;
+    display:flex;
+    flex-direction:row;
+    width:15.5rem;
+}
+.form .remember_me input{
+    width:1rem;
+}
+
+.form #TB_Username, .form #TB_Password, .form #TB_Email, .form #TB_Gender, .form #TB_DOB, .form #TB_Password_confirm {
+    width: 15rem;
+    height: 1.5rem;
+}
+.form #btn_login,.form #btn_register{
+    margin-top:0.5rem;
+    background-color:dodgerblue;
+    border-color:transparent;
+    border-radius:0.2rem;
+    width:15rem;
+    height:1.9rem;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    margin-bottom:0.5rem;
+}
+.form #btn_login:hover,.form #btn_register:hover{
+    background-color:transparent;
+    border-color:dodgerblue;
+    color:dodgerblue;
+}

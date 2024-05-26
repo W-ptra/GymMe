@@ -105,7 +105,7 @@ namespace frontend.View
         {
             String quantityStr = TB_Quantity.Text;
             int quantity = int.Parse(quantityStr);
-            if (quantity < 1) return;
+            if (quantity < 2) return;
             quantity -= 1;
             TB_Quantity.Text = quantity.ToString();
         }

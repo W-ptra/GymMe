@@ -1,0 +1,76 @@
+﻿#GV{
+    border-collapse:collapse;
+    margin:25px 0;
+    font-size:0.9em;
+    min-width:400px;
+    
+}
+#GV tbody tr td{
+    padding:0.5rem;
+    text-align:center;
+}
+#GV tbody tr td input{
+    background-color:deepskyblue;
+    color:white;
+    border-color:transparent;
+    cursor:pointer;
+    border-radius:0.3rem;
+}
+#GV tbody tr td input:hover{
+    font-weight:700;
+}
+#GV tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+#GV tbody tr:nth-of-type(even){
+    background-color:#A5D9FF;
+}
+#GV tbody tr:nth-of-type(odd){
+    background-color:#f3f3f3;
+}
+#GV tbody tr:first-child{
+    background-color:#0073C6;
+    color:white;
+    height:2rem;
+    align-items:center;
+}
+#GV tbody tr:first-child th{
+    padding-top:0.4rem;
+    padding-left:0.4rem;
+    padding-right:0.4rem;
+}
+
+
+
+#GV_Cart {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+}
+#GV_Cart tbody tr td{
+    padding:0.5rem;
+    text-align:center;
+}
+#GV_Cart tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+#GV_Cart tbody tr:nth-of-type(even){
+    background-color:#A5D9FF;
+}
+#GV_Cart tbody tr:nth-of-type(odd){
+    background-color:#f3f3f3;
+}
+#GV_Cart tbody tr:first-child{
+    background-color:#0073C6;
+    color:white;
+    height:2rem;
+    align-items:center;
+}
+#GV_Cart tbody tr:first-child th{
+    padding-top:0.4rem;
+    padding-left:0.4rem;
+    padding-right:0.4rem;
+}

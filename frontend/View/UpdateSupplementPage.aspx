@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>GymMe</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -54,7 +54,7 @@
             </div>
             <br />
             <div>
-                <asp:Label ID="label_message" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="label_message" runat="server" Text=""></asp:Label>
             </div>
             <asp:Button ID="btn_update" runat="server" Text="UPDATE" OnClick="btn_update_Click" />
         </div>

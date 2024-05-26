@@ -121,7 +121,7 @@ namespace frontend.View
 
         protected void btn_to_transaction_report_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/View/TransactionDetailPage.aspx");
+            Response.Redirect("~/View/ViewTransactionsReportPage.aspx");
         }
     }
 

@@ -1,0 +1,24 @@
+﻿.form{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    margin-bottom:5rem;
+}
+
+.form input{
+    width:15rem;
+    height:1.5rem;
+}
+
+#btn_update_profile, #btn_change_password{
+    background-color:deepskyblue;
+    color:white;
+    border-color:transparent;
+    cursor:pointer;
+    height:1.8rem;
+    border-radius:0.3rem;
+}
+
+#btn_update_profile:hover, #btn_change_password:hover{
+    font-weight:600;
+}

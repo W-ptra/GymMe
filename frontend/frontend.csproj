@@ -89,10 +89,13 @@
       <DependentUpon>GymeMeModel1.edmx</DependentUpon>
       <LastGenOutput>GymeMeModel1.cs</LastGenOutput>
     </Content>
+    <Content Include="View\css\backButton.css" />
     <Content Include="View\css\login.css" />
     <Content Include="View\css\LoginRegister.css" />
     <Content Include="View\css\mainStyle.css" />
+    <Content Include="View\css\manageSupplement.css" />
     <Content Include="View\css\orderSupplement.css" />
+    <Content Include="View\css\profile.css" />
     <Content Include="View\css\register.css" />
     <Content Include="View\css\table.css" />
     <Content Include="View\HistoryPage.aspx" />

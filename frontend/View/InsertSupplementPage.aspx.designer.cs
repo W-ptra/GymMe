@@ -105,15 +105,6 @@ namespace frontend.View
         protected global::System.Web.UI.WebControls.TextBox TB_TypeId;
 
         /// <summary>
-        /// label_message control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label_message;
-
-        /// <summary>
         /// btn_insert control.
         /// </summary>
         /// <remarks>
@@ -121,5 +112,14 @@ namespace frontend.View
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_insert;
+
+        /// <summary>
+        /// label_message control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_message;
     }
 }

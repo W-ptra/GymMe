@@ -1,0 +1,19 @@
+﻿.back-button{
+    width:100vw;
+    flex-grow:1;
+}
+
+.back-button input{
+    background-color:deepskyblue;
+    color:white;
+    border-color:transparent;
+    padding:0.5rem;
+    text-align:center;
+    margin-left:2vw;
+    border-radius:0.5rem;
+    cursor:pointer;
+}
+
+.back-button input:hover{
+    font-weight:600;
+}

@@ -204,15 +204,6 @@ namespace frontend.View
         protected global::System.Web.UI.WebControls.TextBox TB_Role;
 
         /// <summary>
-        /// Label_update control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_update;
-
-        /// <summary>
         /// btn_update_profile control.
         /// </summary>
         /// <remarks>
@@ -220,6 +211,15 @@ namespace frontend.View
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_update_profile;
+
+        /// <summary>
+        /// Label_update control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_update;
 
         /// <summary>
         /// Label7 control.
@@ -258,15 +258,6 @@ namespace frontend.View
         protected global::System.Web.UI.WebControls.TextBox TB_NewPassword;
 
         /// <summary>
-        /// label_password_change control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label_password_change;
-
-        /// <summary>
         /// btn_change_password control.
         /// </summary>
         /// <remarks>
@@ -274,5 +265,14 @@ namespace frontend.View
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_change_password;
+
+        /// <summary>
+        /// label_password_change control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_password_change;
     }
 }

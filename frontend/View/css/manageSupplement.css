@@ -1,0 +1,13 @@
+﻿#btn_InsertSupplement,#btn_insert,#btn_update{
+    background-color: deepskyblue;
+    border-color: transparent;
+    color: white;
+    cursor: pointer;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+}
+
+#btn_InsertSupplement:hover,#btn_insert:hover,#btn_update:hover{
+    font-weight:600;
+}

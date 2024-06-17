@@ -32,12 +32,15 @@
             </nav>
 
         </div>
-
+        <div>
             <h1 class="title">
                 Transaction Report <br />
-                Coming Soon
-                <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" />
+            
             </h1>
+        </div>
+        <div>
+                <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" />
+        </div>
     </form>
 </body>
 </html>

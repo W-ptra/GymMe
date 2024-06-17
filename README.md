@@ -49,10 +49,10 @@ Page for Admin to manage item either by insert new item, edit the existing item 
 Page for inserting new item.  
 ## 10. Update Supplement
 ![img](https://drive.google.com/uc?export=view&id=1bIyuLoucRMcgJr4aJs_IWUnjIiPjspz9)  
-Page for admin to display all sales data using SAP Crystal Report.  
 Page for updating item.  
 ## 11. Queue
 ![img](https://drive.google.com/uc?export=view&id=19IEdw9I2IisD7CigSxzNUIlXNQXvWvMU)  
 Page for admin to see the order queue and do action such change status from unhandle to handle by clicking handle button.  
 ## 12. Report
 ![img](https://drive.google.com/uc?export=view&id=1FxsnrWfF_LdeaknEYUfkYnL8GNVtLbhG)  
+Page for admin to display all sales data using SAP Crystal Report.  

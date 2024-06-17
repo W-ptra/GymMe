@@ -48,7 +48,8 @@ Page for Admin to manage item either by insert new item, edit the existing item 
 ![img](https://drive.google.com/uc?export=view&id=1ae-_ynTVJYFHSPODxVTp9gKpCjq5_aim)  
 Page for inserting new item.  
 ## 10. Update Supplement
-![img](https://drive.google.com/uc?export=view&id=1IKgh6aEupqJhC8hm9nvzMHG7ThRXbNvE)  
+![img](https://drive.google.com/uc?export=view&id=1bIyuLoucRMcgJr4aJs_IWUnjIiPjspz9)  
+Page for admin to display all sales data using SAP Crystal Report.  
 Page for updating item.  
 ## 11. Queue
 ![img](https://drive.google.com/uc?export=view&id=19IEdw9I2IisD7CigSxzNUIlXNQXvWvMU)  

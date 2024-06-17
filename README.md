@@ -21,12 +21,31 @@ Model layer is responsible for representing concepts in the business or informat
 # Page Interface 
 ## 1. Login 
 ![img](https://drive.google.com/uc?export=view&id=1Dr18HuEO7hN28UUO-a8zjqssZ4HRW9fL)  
+Page for guest to login into an account.  
 ## 2. Register 
 ![img](https://drive.google.com/uc?export=view&id=1pZzkT-jMd15oKnho0wD1uy70-Q9cF6l_)  
+Page for guest to register an account.  
 ## 3. Order
 ![img](https://drive.google.com/uc?export=view&id=15PcfsU5srzxttqvX7227bsUEOALk60to)  
 ![img](https://drive.google.com/uc?export=view&id=1zhcmG20rrzUCV13-AvI5oklI5-ChnG_c)  
+User can order a supplement by selecting certain items and input amount to cart, which later the cart will be submitted to order.  
 ## 4. History 
 ![img](https://drive.google.com/uc?export=view&id=1-zJXo3Xs42qACfw3Bc5McjhJ4jQZnXZ1)  
+Page for User and Admin to see order history.  
 ## 5. Profile
 ![img](https://drive.google.com/uc?export=view&id=1pGNcMdrhHngfCBJcN1MFtEdqOHtNg1V3)  
+Page for User and Admin to update their profile information and change password.  
+## 6. Home
+![img](https://drive.google.com/uc?export=view&id=1IIOyR7XP7erEP0XjqmI80ZnlqhxGhkQ1)  
+Page for Admin to manage item either by insert new item, edit the existing item or delet it.  
+## 7. Insert Supplement
+![img](https://drive.google.com/uc?export=view&id=1ae-_ynTVJYFHSPODxVTp9gKpCjq5_aim)  
+Page for inserting new item.  
+## 8. Update Supplement
+![img](https://drive.google.com/uc?export=view&id=1IKgh6aEupqJhC8hm9nvzMHG7ThRXbNvE)  
+Page for updating item.  
+## 9. Queue
+![img](https://drive.google.com/uc?export=view&id=19IEdw9I2IisD7CigSxzNUIlXNQXvWvMU)  
+Page for admin to see the order queue and do action such change status from unhandle to handle by clicking handle button.  
+## 10. Manage
+![img](https://drive.google.com/uc?export=view&id=1FxsnrWfF_LdeaknEYUfkYnL8GNVtLbhG)  

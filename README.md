@@ -31,21 +31,27 @@ Page for guest to register an account.
 User can order a supplement by selecting certain items and input amount to cart, which later the cart will be submitted to order.  
 ## 4. History 
 ![img](https://drive.google.com/uc?export=view&id=1-zJXo3Xs42qACfw3Bc5McjhJ4jQZnXZ1)  
-Page for User and Admin to see order history.  
-## 5. Profile
+Page for User and Admin to see the order history and can inspect further for detail information by clicking view button.  
+## 5. Transaction Detail
+![img](https://drive.google.com/uc?export=view&id=1RNkObEayPB1REKG8Oc_SMadpB6QaE_EO)  
+Page for User and Admin to see the detail information of certain transaction
+## 6. Profile
 ![img](https://drive.google.com/uc?export=view&id=1pGNcMdrhHngfCBJcN1MFtEdqOHtNg1V3)  
 Page for User and Admin to update their profile information and change password.  
-## 6. Home
+## 7. Home
 ![img](https://drive.google.com/uc?export=view&id=1IIOyR7XP7erEP0XjqmI80ZnlqhxGhkQ1)  
+Page for admin to see all account.  
+## 8. Manage
+![img](https://drive.google.com/uc?export=view&id=1FxsnrWfF_LdeaknEYUfkYnL8GNVtLbhG) 
 Page for Admin to manage item either by insert new item, edit the existing item or delet it.  
-## 7. Insert Supplement
+## 9. Insert Supplement
 ![img](https://drive.google.com/uc?export=view&id=1ae-_ynTVJYFHSPODxVTp9gKpCjq5_aim)  
 Page for inserting new item.  
-## 8. Update Supplement
+## 10. Update Supplement
 ![img](https://drive.google.com/uc?export=view&id=1IKgh6aEupqJhC8hm9nvzMHG7ThRXbNvE)  
 Page for updating item.  
-## 9. Queue
+## 11. Queue
 ![img](https://drive.google.com/uc?export=view&id=19IEdw9I2IisD7CigSxzNUIlXNQXvWvMU)  
 Page for admin to see the order queue and do action such change status from unhandle to handle by clicking handle button.  
-## 10. Manage
+## 12. Report
 ![img](https://drive.google.com/uc?export=view&id=1FxsnrWfF_LdeaknEYUfkYnL8GNVtLbhG)  

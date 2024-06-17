@@ -1,4 +1,7 @@
-﻿using System;
+﻿using frontend.Dataset;
+using frontend.Model;
+using frontend.Report;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +14,8 @@ namespace frontend.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
             if (!IsPostBack)
             {
                 HttpCookie roleCookie = Request.Cookies["Role"];
@@ -30,6 +35,36 @@ namespace frontend.View
                 }
  
             }
+            MyCrystalReport myCrystalReport = new MyCrystalReport();
+
+            GymMeSQLDatabaseEntities5 db = new GymMeSQLDatabaseEntities5();
+
+            DataSet1 dataSet1 = getData((from x in db.TransactionHeaders select x).ToList());
+
+            myCrystalReport.SetDataSource(dataSet1);
+            CrystalReportViewer1.ReportSource = myCrystalReport;
+        }
+        public DataSet1 getData(List<TransactionHeader> transactionHeaders) 
+        {
+            DataSet1 dataSet = new DataSet1();
+            var headerTable = dataSet.TransactionHeader;
+            var detailTable = dataSet.TransactionDetail;
+            foreach(TransactionHeader th in transactionHeaders)
+            {
+                var headerRow = headerTable.NewRow();
+                headerRow["TransactionId"] = th.TransactionID;
+                headerRow["TransactionDate"] = th.TransactionDate;
+                headerTable.Rows.Add(headerRow);
+                foreach(TransactionDetail td in th.TransactionDetails)
+                {
+                    var detailRow = detailTable.NewRow();
+                    detailRow["TransactionId"] = td.TransactionID;
+                    detailRow["SupplementId"] = td.SupplementID;
+                    detailTable.Rows.Add(detailRow);
+
+                }
+            }
+            return dataSet;
         }
 
         protected void btn_to_home_Click(object sender, EventArgs e)
@@ -79,6 +114,11 @@ namespace frontend.View
 
             Session.Clear();
             Response.Redirect("~/View/LoginPage.aspx");
+        }
+
+        protected void CrystalReportViewer1_Init(object sender, EventArgs e)
+        {
+
         }
     }
 }

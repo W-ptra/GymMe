@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewTransactionsReportPage.aspx.cs" Inherits="frontend.View.ViewTransactionsReportPage" %>
 
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -29,11 +31,13 @@
                 </div>
             </nav>
 
+        </div>
+
             <h1 class="title">
                 Transaction Report <br />
                 Coming Soon
+                <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" />
             </h1>
-        </div>
     </form>
 </body>
 </html>

@@ -1,5 +1,5 @@
 # GymMe
-Project mata kuliah pattern software design semester 4, GymMe is a web-based online health and supplement selling application. Created using C# and ASP.NET framework with SQL Server database. Implementing Domain-Driven Design (DDD) approach, this project consisting of 6 layers: Views, Controller, Handler, Factory, Repository, and Model.
+Project mata kuliah pattern software design semester 4, GymMe is a web-based online health and supplement selling application. Created using C# and ASP.NET framework with SQL Server database. Implementing Domain-Driven Design (DDD) approach, this project consisting of 7 layers: Views, Controller, Web Service, Handler, Factory, Repository, and Model.
 # Layers
 ![img](https://drive.google.com/uc?export=view&id=1GLwPOTp7C2ejX5FImnie66vCwSEIeR46)  
 ## 1. Views  
